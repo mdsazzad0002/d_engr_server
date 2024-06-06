@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #FFCA42;
+    --blue: #1B3764;
+    --font-inter: Inter;
+    --black: #0D161A;
+    --light-blue: #4353FF;
+    --gray: #646E79;
+}
+
+.font-inter {
+    font-family: var(--font-inter);
+}
+
+
+.textc-blue {
+    color: var(--blue);
+}
+
+.textc-black {
+    color: var(--black);
+}
+
+.textc-gray {
+    color: var(--gray);
+}
+
+.textc-light-blue {
+    color: var(--light-blue);
+}
+
+.bgc-light-blue {
+    background: var(--light-blue);
+}
+
+.size-16 {
+    font-size: 16px;
+}
+
+.size-18 {
+    font-size: 18px;
+}
+
+.size-22 {
+    font-size: 22px;
+}
+
+.size-36 {
+    font-size: 36px;
+}
+
+.size-40 {
+    font-size: 36px;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+section {
+    padding: 4rem 0 0 0;
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.hero {
+    min-height: 80vh;
+    background: var(--yellow);
+}
+
+.info {
+    z-index: 100;
+}
+
+.info .file-info::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    height: 676px;
+    width: 345px;
+    background: var(--blue);
+    z-index: -1;
+    border-bottom-left-radius: 25px;
+}

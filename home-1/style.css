@@ -1,0 +1,354 @@
+  /* ********************************
+  *About Me /Hero Typed
+  ******************************** */
+  #hero_bg {
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 800px;
+      background: url("/assets/img/logo.jpg") right no-repeat;
+      position: absolute;
+      z-index: -1;
+      background-size: 70vh;
+      background-position-x: 90%;
+      /* filter: blur(1px) */
+  }
+
+  #hero_typed {
+      background: transparent;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 800px;
+      /* background: url("/assets/img/logo.jpg") right no-repeat; */
+      background-size: contain;
+      position: relative;
+      /* text-align: center; */
+  }
+
+
+  #hero_typed h1 {
+      margin: 0;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 80px;
+      color: #45505b;
+  }
+
+  #hero_typed p {
+      color: #45505b;
+      margin: 15px 0 0 0;
+      font-size: 26px;
+      font-family: "Poppins", sans-serif;
+  }
+
+  #hero_typed p span {
+      color: #108872;
+      letter-spacing: 1px;
+  }
+
+  #hero_typed .social-links {
+      margin-top: 30px;
+  }
+
+  #hero_typed .social-links a {
+      font-size: 24px;
+      display: inline-block;
+      color: #45505b;
+      line-height: 1;
+      margin-right: 20px;
+      transition: 0.3s;
+  }
+
+  #hero_typed .social-links a:hover {
+      color: #646668;
+  }
+
+  #hero_typed .btns {
+      display: flex;
+      align-items: center;
+
+  }
+
+  #hero_typed .btns a {
+      padding: 10px 15px;
+      color: black;
+      border: 1px solid #6b6b6b;
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-top: 25px;
+  }
+
+  #hero_typed .btns a:hover {
+      color: white;
+      border: 1px solid #6b6b6b;
+      background: #6b6b6b;
+  }
+
+  #hero_typed .visitors {
+      color: #000;
+      font-size: 30px;
+      font-weight: bold;
+  }
+
+  #hero_typed .visitors span {
+      color: tomato;
+  }
+
+
+  /* extra mediam */
+  @media (max-width: 992px) {
+      #hero_typed {
+          text-align: center;
+          /* padding-left: 160px; */
+      }
+
+      #hero_typed .btns {
+          justify-content: center;
+      }
+
+      #hero_bg {
+          background-position: center center;
+          filter: blur(9px)
+      }
+  }
+
+
+
+
+
+  /* small device */
+  @media (max-width:425px) {
+      #hero_typed h1 {
+          font-size: 32px;
+          line-height: 36px;
+      }
+
+      #hero_typed p {
+          margin-top: 10px;
+          font-size: 20px;
+          line-height: 24px;
+      }
+  }
+
+
+  /*--------------------------------------------------------------
+# Counts
+--------------------------------------------------------------*/
+  .counts {
+      background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(/assets/img/Web-Developer-skill.jpg) fixed center center;
+      background-size: cover;
+      padding: 60px 0;
+      /*  //background:#007aff;*/
+      padding: 40px 0 20px 0;
+      color: #fff;
+  }
+
+  .counts .counters span {
+      font-size: 36px;
+      display: block;
+      font-weight: 700;
+      color: white;
+  }
+
+  .counts .counters p {
+      padding: 0;
+      margin: 0 0 20px 0;
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+  }
+
+
+
+  /* ==================================================
+  Features Styling
+  ================================================== */
+  .features {
+      padding-top: 50px !important;
+      padding: 10px 10px 45px 10px;
+      overflow: hidden;
+      /* background: #6b6b6b; */
+  }
+
+
+  .features h2 {
+      color: #6b6b6b;
+  }
+
+  .feature-col {
+      padding-top: 20px;
+      display: table;
+      padding-bottom: 20px;
+      border: 1px solid #eee;
+
+
+  }
+
+  .feature-col .card {
+      border: none;
+  }
+
+  .feature-col>div>div {
+      display: table-cell;
+      vertical-align: middle;
+  }
+
+  .feature-col:hover {
+      border-radius: 5px;
+      box-shadow: 0 0 6px #6b6b6b;
+      transition: all 0.3s ease;
+
+  }
+
+  .feature-col:hover .feature-icon {
+      color: #eee;
+      background: #6b6b6b;
+  }
+
+  .feature-col>div>div:last-child {
+      padding-left: 20px;
+  }
+
+  .feature-col .feature-icon {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
+      background: #eee;
+      color: #6b6b6b;
+      font-size: 24px;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0;
+  }
+
+
+
+  .feature-col h3 {
+      color: #000;
+  }
+
+  .feature-col p {
+      font-size: 14px;
+      color: #999;
+  }
+
+
+
+  /*--------------------------------------------------------------
+    # Team
+    --------------------------------------------------------------*/
+  .team {
+      padding: 10px 0;
+      /* margin-top: 85px; */
+  }
+
+  .team .row_own {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+  }
+
+  .team .member {
+      position: relative;
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+      padding: 0;
+      text-align: center;
+      border-radius: 10px;
+      background: #fff;
+      margin-bottom: 15px;
+      min-height: 250px;
+  }
+
+  .team .member .pic {
+      margin: 0 auto;
+      overflow: hidden;
+      max-width: 100%;
+      min-width: 180px;
+      margin: 0 auto;
+      height: auto;
+      border-radius: 5px;
+  }
+
+
+
+  .team .member .pic img {
+      width: 100%;
+      background-size: cover;
+      transition: ease-in-out 0.3s;
+      height: auto;
+  }
+
+
+  .team .member:hover img {
+      transform: scale(1.1);
+
+  }
+
+  .team .member .member-info {
+      padding: 30px;
+      border-top: 1px solid #eee;
+  }
+
+  .team .member h4 {
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-size: 22px;
+      color: #6b6b6b;
+  }
+
+  .team .member span {
+      display: block;
+      font-size: 18px;
+      padding-bottom: 10px;
+      position: relative;
+      font-weight: 500;
+  }
+
+
+  .team .member p {
+      margin: 10px 0 0 0;
+      font-size: 17px;
+  }
+
+  .team .member .social {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+  }
+
+  .team .member .social a,
+  .team .member a {
+      transition: ease-in-out 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      width: 32px;
+      height: 32px;
+      background: #ecf6fe;
+      color: #0665b7;
+  }
+
+  .team .member .social a i,
+  .team .member a i {
+      font-size: 16px;
+      margin: 0 2px;
+  }
+
+  .team .member .social a:hover,
+  .team .member a:hover {
+      background: #0880e8;
+      color: #fff;
+  }
+
+  .team .member .social a+a,
+  .team .member a+a {
+      margin-left: 8px;
+  }

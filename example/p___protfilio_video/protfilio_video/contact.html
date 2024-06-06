@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techonologist</title>
+    <link rel="icon" href="assets/img/Ellipse 1.svg" type="image/svg" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <input type="checkbox" name="" id="toggle">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Works</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a class="active" href="contact.html">Contacts</a></li>
+        </ul>
+        <label for="toggle" class="tooglebtn">
+            <i class="bi bi-justify"></i>
+        </label>
+    </header>
+    <section class="contact" id="contact">
+        <div class="title">
+            Contact
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <div class="container">
+                    <form action="action_page.php">
+
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                        </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+            <div class="box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.6601976713437!2d90.35899717451781!3d23.759493888428743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf5885656b07%3A0x2871fff74d617a66!2sHRSOFT%20Bangladesh!5e0!3m2!1sen!2sbd!4v1694101824347!5m2!1sen!2sbd"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+
+        <div class="social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+
+        <div class="creadit">
+            Copyright ©2020 All rights reserved
+        </div>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

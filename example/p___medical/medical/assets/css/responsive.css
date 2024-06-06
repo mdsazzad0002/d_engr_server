@@ -1,0 +1,37 @@
+@media (max-width:768px) {
+    #header .top {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width:600px) {
+    #header .top .box-container {
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width:991px) {
+    #header .menubar ul li {
+        width: 100%;
+        display: block;
+
+    }
+
+    #header .menubar ul li a {
+        text-align: left;
+        margin: 0 !important;
+        display: inline-block;
+        padding: 5px 0;
+        width: 100%;
+    }
+
+    #header .menubar * a:hover {
+        opacity: 0.5;
+    }
+}
