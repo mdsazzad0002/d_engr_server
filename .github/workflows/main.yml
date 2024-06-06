@@ -17,7 +17,7 @@ jobs:
           FTP_PASS="dengrweb4tech"
           FTP_HOST="dengrweb.com"
           FTP_PORT="21"
-          REMOTE_PATH="public_html/"
+          REMOTE_PATH="/"
           
           # Connect to FTP server and upload files
           ftp -n $FTP_HOST $FTP_PORT <<END_SCRIPT
