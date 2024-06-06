@@ -13,8 +13,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 📂 Sync files
-        uses: ./
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: dengrweb.com
           username: sazzad_dengrweb
           password: dengrweb4tech
+          protocol: ftp
+          server-dir: public_html/
+
+        
