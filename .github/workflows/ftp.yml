@@ -16,8 +16,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: dengrweb.com
-          username: sazzad_dengrweb
-          password: dengrweb4tech
+          username: ${{ secrets.FTPUSERNAME }}
+          password: ${{ secrets.FTPPASSWORD }} 
           protocol: ftp
           server-dir: public_html/
 
