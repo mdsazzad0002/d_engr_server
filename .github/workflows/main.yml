@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - main  # Adjust branch name as needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Upload files to server via FTP
+        run: |
+          FTP_USER="sazzad_dengrweb"
+          FTP_PASS="dengrweb4tech"
+          FTP_HOST="dengrweb.com"
+          FTP_PORT="21"
+          REMOTE_PATH="public_html/"
+          
+          # Connect to FTP server and upload files
+          ftp -n $FTP_HOST $FTP_PORT <<END_SCRIPT
+          quote USER $FTP_USER
+          quote PASS $FTP_PASS
+          put -r ./* $REMOTE_PATH
+          quit
+          END_SCRIPT
