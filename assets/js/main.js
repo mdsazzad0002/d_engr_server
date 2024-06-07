@@ -124,34 +124,7 @@
 
 
 
-  // verify code
-  $('#verify_box').on('submit', function (e) {
-    e.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: '/suscribe/verify_mail.php',
-      processData: false,
-      contentType: false,
-      data: new FormData(this),
 
-      statusCode: {
-        404: function () {
-          alert("Something is Wrong");
-        }
-      },
-      success: function (data) {
-        $('.verify_alert').html(data);
-        // $('#verify_box')[0].reset();
-        // $('#modalbtn').click();
-        // $("#d")[0].reset()
-        setTimeout(function () {
-          $('.verify_alert').html('');
-
-        }, 15000)
-
-      }
-    });
-  })
 
 
   // app install dialog box open

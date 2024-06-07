@@ -1,9 +1,9 @@
 <?php 
 	require_once '../conection/index.php';
-	if ($_POST['verify_code']) {
-		$verify_code=$_POST['verify_code'];
+	if ($_REQUEST['verify_code']) {
+		$verify_code=$_REQUEST['verify_code'];
 
-		$verify_email=$_POST['verify_email'];
+		$verify_email=$_REQUEST['verify_email'];
 
 		$row=mysqli_num_rows($con->query("SELECT * FROM `suscribe` WHERE `email`='$verify_email' AND `status`='$verify_code'"));
 		if ($row==1) {
@@ -21,4 +21,13 @@
 		echo "<p class='bg-danger p-2 rounded text-light d-block'>Note: We are Not found Expected data</p>";
 	}
 
+
+
  ?>
+
+<script>
+setTimeout(() => {
+	window.location.href="<?=APP_URL?>";
+}, 2500);
+
+</script>

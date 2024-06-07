@@ -57,7 +57,7 @@
                     <td><?= $row_slider['name']; ?></td>
                     <th>
                         <select onchange="catagory_change(this, <?= $row_slider['id']; ?>)" class="form-control">
-                            <option value="<?= $row_slider['catagory']; ?>"><?= ucfirst($row_slider['catagory']); ?></option>
+                            <option value="<?= $row_slider['catagory']; ?>"><?= ucfirst($row_slider['catagory'] ?? ''); ?></option>
                             <!-- declare upon catagory loop -->
                             <?= $catagory; ?>
                         </select>

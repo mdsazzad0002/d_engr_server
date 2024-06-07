@@ -91,6 +91,14 @@
 
 		 
 		$payment = $con->query("CREATE TABLE IF NOT EXISTS `payment`(id int not null auto_increment, email varchar(150), payment int(11), t_id varchar(100),  currency varchar(20), paymentMethod varchar(100),   status varchar(150), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,   primary key(id))");
+
+
+		// 6/7/24
+		$general_setting = $con->query("CREATE TABLE IF NOT EXISTS `general_setting`(id int not null auto_increment, name varchar(150), value varchar(2000), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, primary key(id))");
+
+		
+
+
 	}
 
 

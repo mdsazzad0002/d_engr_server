@@ -55,9 +55,12 @@
     .then(response => {
       return response.text();
     })
-    .then(data => {
-      thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      .then(data => {
+        
+        data = JSON.parse(data);
+        thisForm.querySelector('.loading').classList.remove('d-block');
+      
+        if (data.code.trim() == '200') {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
@@ -73,6 +76,7 @@
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.sent-message').innerHTML = error;
     thisForm.querySelector('.sent-message').classList.add('d-block');
+    console.log(error)
   }
 
 })();

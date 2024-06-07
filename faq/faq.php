@@ -179,7 +179,7 @@
         <div id="faq_question">
           <div class="center midSaleBg">
             <i class="bi bi-pencil-square"></i>
-            <a href="/about/#contact">Your Question is Our Answer. <br> আপনার প্রশ্ন আমাদের উত্তর।</a>
+            <a href="<?= APP_URL ?>/about/#contact">Your Question is Our Answer. <br> আপনার প্রশ্ন আমাদের উত্তর।</a>
           </div>
         </div>
       </div>

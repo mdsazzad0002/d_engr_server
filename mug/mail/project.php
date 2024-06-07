@@ -2,13 +2,6 @@
 require_once '../../conection/index.php';
 
 // Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-// More headers
-$headers .= 'From: <web.developer.sazzad@gmail.com>' . "\r\n";
-$headers .= 'Cc: web.developer.sazzad@gmail.com' . "\r\n";
-
 $message='';
 $to='';
 $subject='';
@@ -26,10 +19,13 @@ if (isset($_GET['project_id'])) {
 		$id=$project_id;
 		$select_project=mysqli_fetch_assoc($con->query("SELECT * FROM `project_info` WHERE `id`='$id'"));
 		$description=$select_project['description'];
-		$subject="TTCM New project ||".$select_project['name'];
+		$subject="Dengrweb ||".$select_project['name'];
 		$image=$select_project['file'];
 		$feature=$select_project['feture'];
-		$link=$select_project['link'];
+
+		$link=$select_project['link'] ?? '';
+
+
 		$message="<!DOCTYPE html>
 <html>
 <head>
@@ -99,7 +95,7 @@ if (isset($_GET['project_id'])) {
 		</div>
 		<div class='card-body'>
 			<div class='image'>
-				<img src='https://ttcm.pw/notice/".$image."'/>
+				<img src='".APP_URL."/assets/img/".$image."'/>
 			</div>
 			<p style='text-align:justify'>".$description."</p>
 			
@@ -133,7 +129,7 @@ if (isset($_GET['project_id'])) {
 			<div class='text-center'>
 				You received this message because you This website is linked to. thank you
 				<br>
-				Alright reserved <a href='https://ttcn.pw'>ttcm</a>
+				Alright reserved <a href='".APP_URL."'>D Engr Web</a>
 			</div>
 		</div>
 	</div>
@@ -144,10 +140,9 @@ if (isset($_GET['project_id'])) {
 	
 }
 
-
-if (mail($to,$subject,$message,$headers)) {
-	echo "success";
-}else{
-	echo "failed";
-}
+echo "<script>".APP_URL."email/?subject=".$subject."&body=jhkj&to=".$to."&name=Subscriber</script>"
+// $to
+// $subject
+// $message
+// $headers
 ?>

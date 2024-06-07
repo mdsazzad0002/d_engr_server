@@ -645,44 +645,47 @@ if (file_exists('../email_function_organize/index.php')) {
         }
       },
       success: function(data) {
+        data =JSON.parse(data)
+        if(data.i_icon=='success'){
+          $('#modalbtn').click();
+          $('#verify_email').val($('#suscribe').val());
 
-        let get_data = JSON.parse(data);
-        document.querySelector('#verify_email').value = (get_data.to);
-        if (get_data.i_icon == 'success') {
-
-          // requested for mail when success
-          let xhttp121 = new XMLHttpRequest;
-          let formdata121 = new FormData();
-          formdata121.append('code', get_data.i_code);
-          formdata121.append('to', get_data.to);
-          formdata121.append('suscribe', 'true');
-
-          xhttp121.onload = function() {
-            let data121 = JSON.parse(this.responseText);
-            // alert for success
-            swal({
-              'icon': 'success',
-              'title': data121.i_text,
-              'text': data121.i_description,
-            })
-
-            if (data121.i_icon == 'success') {
-              $('#modalbtn').click();
-            }
-          }
-          xhttp121.open("POST", "<?= $url_email_send; ?>");
-          xhttp121.send(formdata121);
-
-
-        } else {
-          // alert when not success
-          swal({
-            'icon': get_data.i_icon,
-            'text': get_data.i_text,
-          })
         }
+        swal({
+            'icon': data.i_icon,
+            'text': data.i_text,
+          })
       }
       // end when success url send received data
+    });
+  })
+
+    // verify code
+    $('#verify_box').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: '<?= APP_URL;?>/suscribe/verify_mail.php',
+      processData: false,
+      contentType: false,
+      data: new FormData(this),
+
+      statusCode: {
+        // 404: function () {
+        //   alert("Something is Wrong");
+        // }
+      },
+      success: function (data) {
+        $('.verify_alert').html(data);
+        // $('#verify_box')[0].reset();
+        // $('#modalbtn').click();
+        // $("#d")[0].reset()
+        setTimeout(function () {
+          $('.verify_alert').html('');
+
+        }, 15000)
+
+      }
     });
   })
 </script>

@@ -1,6 +1,6 @@
 <?php
 if (!defined('main')) {
-  echo "<script>window.location.href='/index.php'</script>";
+  echo "<script>window.location.href='../index.php'</script>";
   exit();
 };
 ?>
@@ -236,9 +236,10 @@ if (!defined('main')) {
               </div>
             </div>
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required value="<?php if (isset($_GET['title'])) {
-                                                                                                                          echo 'Project Name: ' . $_GET['title'] . ' (id=' . $_GET['id'] . ')';
-                                                                                                                        } ?>">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required 
+              value="<?php if (isset($_GET['title'])) {
+                echo 'Project Name: ' . $_GET['title'] . ' (id=' . $_GET['id'] . ')';
+              } ?>">
             </div>
             <div class="form-group mt-3">
               <textarea class="form-control" name="message" rows="5" placeholder="Message" required>

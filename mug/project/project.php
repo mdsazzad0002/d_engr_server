@@ -264,15 +264,16 @@ if (!defined('main')) {
     function mailfun(data) {
       $.ajax({
         type: 'GET',
-        url: '../mail/project.php',
+        url: '<?= APP_URL?>email/',
         data: {
           'project_id': data,
         },
         success: function(sdata) {
-          if (sdata == 'success') {
-            swal("Email alert!", "Mail send success", "success");
-          } else {
+          sdata =JSON.parse(sdata);
+          if (sdata.code == '22000') {
             swal("Email alert!", "Mail send Failed", "error");
+            } else if(sdata.code == '200') {
+            swal("Email alert!", "Mail send success", "success");
           }
 
         }

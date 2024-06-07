@@ -21,3 +21,8 @@ $dbname = DB_NAME;
 $con = mysqli_connect($host, $username, $password, $dbname);
 
 
+
+
+function setting($key, $con){
+    return mysqli_fetch_assoc($con->query("SELECT * FROM  `general_setting` WHERE `name` = '$key'"))['value'] ?? '';
+}

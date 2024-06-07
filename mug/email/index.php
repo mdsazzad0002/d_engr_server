@@ -47,7 +47,8 @@ require_once '../../conection/index.php';
             <div id="content">
 
                 <?php
-                // top bar
+                // top bar 
+                
                 require_once '../assets/topbar.php';
                 ?>
 
