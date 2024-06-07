@@ -1,4 +1,0 @@
-[23-Nov-2023 01:12:36 UTC] PHP Warning:  unlink(../../image/notice/): Is a directory in /home/tryrstli/public_html/web.dengrweb.com/mug/project/project_delete.php on line 9
-[23-Nov-2023 01:14:04 UTC] PHP Warning:  unlink(../../image/notice/): Is a directory in /home/tryrstli/public_html/web.dengrweb.com/mug/project/insert_update_project.php on line 143
-[23-Nov-2023 01:51:09 UTC] PHP Warning:  unlink(../../image/notice/): Is a directory in /home/tryrstli/public_html/web.dengrweb.com/mug/project/insert_update_project.php on line 143
-[23-Nov-2023 02:00:24 UTC] PHP Warning:  unlink(../../image/notice/): Is a directory in /home/tryrstli/public_html/web.dengrweb.com/mug/project/insert_update_project.php on line 143
