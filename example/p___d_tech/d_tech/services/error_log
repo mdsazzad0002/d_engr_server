@@ -1,0 +1,30 @@
+[11-Jan-2024 18:50:03 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php on line 6
+[11-Jan-2024 18:50:03 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 6
+[11-Jan-2024 18:50:03 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 7
+[11-Jan-2024 18:50:08 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php on line 6
+[11-Jan-2024 18:50:08 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 6
+[11-Jan-2024 18:50:08 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 7
+[11-Jan-2024 18:50:12 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php on line 6
+[11-Jan-2024 18:50:12 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 6
+[11-Jan-2024 18:50:12 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 7
+[03-Feb-2024 14:24:31 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php on line 6
+[03-Feb-2024 14:24:31 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 6
+[03-Feb-2024 14:24:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php on line 7
+[26-Feb-2024 07:53:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php:6
+Stack trace:
+#0 /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php(6): mysqli_connect()
+#1 /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php(2): require('/home/tryrstli/...')
+#2 {main}
+  thrown in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php on line 6
+[26-Feb-2024 07:56:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php:6
+Stack trace:
+#0 /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php(6): mysqli_connect()
+#1 /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php(2): require('/home/tryrstli/...')
+#2 {main}
+  thrown in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php on line 6
+[26-Feb-2024 07:56:40 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php:6
+Stack trace:
+#0 /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php(6): mysqli_connect()
+#1 /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/get_data_calender.php(2): require('/home/tryrstli/...')
+#2 {main}
+  thrown in /home/tryrstli/public_html/web.dengrweb.com/example/p___d_tech/d_tech/services/db.php on line 6

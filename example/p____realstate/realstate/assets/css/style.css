@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    padding: 65px 0;
+}
+.section-title h2{
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+.section-title h2::after{
+    content: '';
+    width: 100px;
+    background: lightseagreen;
+    position: absolute;
+    height: 5px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+}
+/* navbar */
+nav .navbar-brand{
+    color: lightseagreen;
+}
+/* navbar */
+/* hero */
+.hero .carousel-inner{
+    position: relative;
+}
+.hero .carousel-inner::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+}
+
+.hero .carusel_image{
+    height: 80vh;
+}
+.hero .carousel-caption {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 1;
+    width: 70%;
+    transform: translate(-50%, -50%);
+}
+.hero .carousel-caption h2{
+    font-size: 50px !important;
+}
+
+
+/* about us */
+.about_us .icon i{
+    font-size: 35px;
+    color: lightseagreen;
+}
+
+/* end about us */
+
+/* galary */
+.galary .galary_image{
+    position: relative;
+}
+.galary .galary_image img{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+.galary .galary_image .galary_content{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.285);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.galary .galary_image .galary_content:hover{
+    background: transparent;
+}
+
+/* galary */
+
+/* project */
+.project .project_items{
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    min-height: 250px;
+    width: -5px;
+    flex: 1 1 32.33%;
+    cursor: pointer;
+}
+.project .project_items::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    transition: 0.5s;
+
+}
+.project .project_items:hover::after {
+    background: transparent;
+}
+.project .project_items .content{
+    position: relative;
+    z-index: 1;
+    color: whitesmoke;
+}
+@media (max-width:768px) {
+    .project .project_items {
+        flex: 1 1 40%;
+    }
+}
+/* project */
+
+/* review */
+.review{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/house.jpg');
+}
+.review  .section-title{
+    color: #fff;
+}
+.review .swiper {
+    width: 100%;
+    height: 100%;
+    justify-content: center;    
+    max-width: 800px;
+}
+
+.review .swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    max-height: 400px;
+
+    
+    cursor: e-resize;
+}
+.review .swiper-slide img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* review */
+
+/* contact */
+.contact form{
+    max-width: 650px;
+    margin: 0 auto;
+}
+/* contact */
+
+
+/* footer */
+.footer{
+    background: black;
+    color: white;
+}
+
+.footer .brand-logo{
+    color: lightseagreen;
+}
+
+.footer .footer-title{
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.footer .footer-title::after{
+    content: '';
+    width: 40px;
+    background:lightseagreen;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+}
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 1px 0;
+    display: block;
+}
+/* footer */
+
+/* credit */
+.credit{
+    text-align: center;
+    background: #6b6b6b;
+    padding: 10px;
+    color: #fff;
+}
+.credit a{
+    color: lightseagreen;
+}
+/* credit */

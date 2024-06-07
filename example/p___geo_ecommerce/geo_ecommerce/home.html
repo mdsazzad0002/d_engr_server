@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>groco Shopping mall</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- =============================== Header =========================== -->
+    <section id="header" class="header">
+
+        <!-- logo -->
+        <a class="logo" href="home.html"><i class="bi bi-basket"></i>Groco</a>
+
+        <!-- navbar -->
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="review.html">review</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contacts</a>
+        </nav>
+
+        <!-- icons -->
+        <div class="icons">
+            <div id="menu-btn" class="bi bi-justify"></div>
+            <div id="cart-btn" class="bi bi-cart"></div>
+            <div id="search-btn" class="bi bi-search"></div>
+            <div id="login-btn" class="bi bi-person"></div>
+        </div>
+
+        <!-- serch form -->
+        <form action="" class="search-from">
+            <input type="search" name="" id="search-box" placeholder="search here.......">
+            <label for="search-box" class="bi bi-search"></label>
+        </form>
+
+        <!-- shopping cart -->
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="bi bi-x"></i>
+                <img src="image/about-img.jpg" alt="">
+                <div class="content">
+                    <h3>Organic Food</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$99.99</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="bi bi-x"></i>
+                <img src="image/hero-background.jpg" alt="">
+                <div class="content">
+                    <h3>Organic Food</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$99.99</span>
+                </div>
+            </div>
+            <h3 class="total">Total: <span>56.97</span></h3>
+            <div class="btn">CheckOut</div>
+        </div>
+
+        <!-- login form -->
+        <from class="login-form">
+            <h3>Login form</h3>
+            <input type="email" name="" placeholder="ebter your email address" class="box">
+            <input type="password" name="" placeholder="ebter your password address" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="Login Now" class="btn">
+            <p>Forget password? <a href="#">Click here</a></p>
+            <p>Fdon't have an account? <a href="#">Create One</a></p>
+        </from>
+    </section>
+    <!-- =================================== end Header ============================== -->
+
+
+    <!-- ===================================== home ================================== -->
+    <section class="home">
+        <div class="slides-container">
+            <div class="slide active">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/team/team-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/team/team-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/team/team-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/portfolio/portfolio-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/portfolio/portfolio-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/portfolio/portfolio-4.jpg" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/portfolio/portfolio-5.jpg" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh and Organic</span>
+                    <h3>Up to 50% off</h3>
+                    <a class="btn">Shop Now</a>
+                </div>
+                <div class="image">
+                    <img src="image/portfolio/portfolio-6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="prev-slide" class="bi bi-arrow-left-square-fill" onclick="prev()"></div>
+        <div id="next-slide" class="bi bi-arrow-right-square-fill" onclick="next()"></div>
+    </section>
+
+    <!-- ===================================== end home ================================== -->
+
+
+    <!-- ============================ .banner container ======================== -->
+    <section class="banner-container">
+
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="image/a-img.jpg" alt="">
+            <div class="content">
+                <span>Limited Sales</span>
+                <h3>Up to 50% off</h3>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================end .banner container ======================== -->
+
+
+
+
+
+
+    <!-- ==================================================== footer ======================== -->
+
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick Links</h3>
+                <a href="home.html"><i class="bi bi-arrow-right"></i>Home</a>
+                <a href="shop.html"><i class="bi bi-arrow-right"></i>Shop</a>
+                <a href="about.html"><i class="bi bi-arrow-right"></i>About</a>
+                <a href="review.html"><i class="bi bi-arrow-right"></i>review</a>
+                <a href="blog.html"><i class="bi bi-arrow-right"></i>Blog</a>
+                <a href="contact.html"><i class="bi bi-arrow-right"></i>Contacts</a>
+            </div>
+
+            <div class="box">
+                <h3>Extra links</h3>
+                <a href=""><i class="bi bi-arrow-right"></i>my order</a>
+                <a href=""><i class="bi bi-arrow-right"></i>my favorite</a>
+                <a favorite=""><i class="bi bi-arrow-right"></i>wishlist</a>
+                <a href=""><i class="bi bi-arrow-right"></i>my account</a>
+                <a href=""><i class="bi bi-arrow-right"></i>terms and condition</a>
+
+            </div>
+
+            <div class="box">
+                <h3>Flow us</h3>
+                <a href=""> <i class="bi bi-facebook"></i> Facebook</a>
+                <a href=""> <i class="bi bi-whatsapp"></i> Whatsapp</a>
+                <a href=""> <i class="bi bi-telegram"></i> Telegram</a>
+                <a href=""> <i class="bi bi-instagram"></i> instagram</a>
+                <a href=""> <i class="bi bi-linkedin"></i> linkedin</a>
+            </div>
+            <div class="box">
+                <h3>newslater</h3>
+                <p>suscribe for latest updates</p>
+                <form action="">
+                    <input type="email" placeholder="enter email address">
+                    <input type="submit" value="submit" class="btn">
+                </form>
+                <img class="payment" src="image/favicon.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="creadit">
+        all right &copy; copyright reserved
+    </section>
+
+    <script src="js/common.js"></script>
+    <script src="js/slider.js"></script>
+
+</body>
+
+</html>

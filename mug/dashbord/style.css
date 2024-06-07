@@ -1,0 +1,16 @@
+        /* dashboard product info */
+        .border-4 {
+            border-width: 8px;
+        }
+
+        .border-start {
+            border-bottom-width: 1px;
+            border-right-width: 1px;
+            border-top-width: 1px;
+        }
+
+        .card-raised {
+            margin-bottom: 5px;
+        }
+
+        /* suscrib and plan */

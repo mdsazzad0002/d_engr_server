@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&display=swap');
+@import url('https://cdn.dengrweb.com/bootstrap-icons-1.11.1/bootstrap-icons.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --padding: 3rem 9%;
+    --Dark-Color: #21243D;
+    --Primary: #FF6464;
+    --light-navy: #EDF7FA;
+    --Secondry: #00A8CC;
+    --Light: #8695A4;
+}
+
+
+
+/* ************************* header ************************* */
+#header {
+    background: var(--white);
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#header input#toggle {
+    display: none;
+}
+
+#header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#header ul li {
+    margin: 5px;
+}
+
+#header ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+    color: var(--Primary);
+}
+
+#header label.tooglebtn {
+    display: none;
+    font-weight: 700;
+}
+
+
+/* ****************************** Hero ******************** */
+#hero {
+    padding: var(--padding);
+    background: var(--white);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+#hero .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hero .box-container .box {
+    flex: 1 1 250px;
+}
+
+#hero .box-container .box h3 {
+    color: var(--Dark-Color);
+    font-family: Heebo;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+
+}
+
+#hero .box-container .box p {
+    margin: 15px 0;
+    color: var(--Dark-Color);
+    font-family: Heebo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#hero .box-container .box .btn {
+    width: 208px;
+    height: 47px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: var(--Primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+}
+
+#hero .box-container .box img {
+    float: right;
+}
+
+
+/* ************************* Post *************** */
+#post {
+    padding: var(--padding);
+    background: var(--light-navy);
+}
+
+#post .catagory {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+#post .catagory p {
+    color: var(--Dark-Color);
+    font-size: 22px;
+}
+
+#post .catagory a {
+    color: var(--Secondry);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#post .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 15px;
+}
+
+#post .box-container .box {
+    background: var(--white);
+    box-shadow: 0px 4px 10px 0px rgba(187, 225, 250, 0.25);
+    padding: 15px;
+}
+
+#post .box-container .box h3 {
+    color: var(--Dark-Color);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#post .box-container .box .info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* ********************* feture ********** */
+#feture {
+    padding: var(--padding);
+    background: var(--white);
+
+}
+
+#feture .title {
+    color: var(--Dark-Color);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+#feture .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+
+}
+
+#feture .box-container .box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+#feture .box-container .box img {
+    width: 246px;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+
+#feture .box-container .box .content .title {
+    color: var(--Dark-Color);
+    font-family: Heebo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#feture .box-container .box .content .date-catagory {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+
+#feture .box-container .box .content .date-catagory .date {
+    background: var(--Dark-Color);
+    color: var(--white);
+    border-radius: 15px;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+#feture .box-container .box .content .date-catagory .catagory {
+    color: var(--Light);
+    font-family: Heebo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#feture .box-container .box .content .details {
+    color: var(--Dark-Color);
+    font-family: Heebo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* ****************** footer *********** */
+#footer {
+    padding: var(--padding);
+    background: var(--white);
+}
+
+#footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+#footer .social a {
+    color: var(--Dark-Color);
+    font-size: 25px;
+
+}
+
+#footer .creadit {
+    text-align: center;
+    color: var(--Dark-Color);
+    font-size: 18px;
+}
+
+
+
+
+
+/* ***************************
+    Work Page
+***************************** */
+#blog_page {
+    padding: var(--padding);
+    background: var(--white);
+}
+
+#blog_page .title {
+    color: var(--Dark-Color);
+    font-family: Heebo;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+#blog_page .box-container .box {
+    margin: 25px 0;
+}
+
+#blog_page .box-container .box .title {
+    color: var(--Dark-Color, #21243D);
+    font-family: Heebo;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#blog_page .box-container .box .date-catagory {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: var(--Dark-Color);
+    margin: 5px 0 10px 0;
+}
+
+#blog_page .box-container .box .date-catagory .uploder {
+    border-left: 1px solid var(--Dark-Color);
+    padding-left: 5px;
+}
+
+#blog_page .box-container .box .description {
+    font-size: 18px;
+    color: var(--Dark-Color);
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/* aditional css blog page */
+#feture.work_page h4.title {
+    font-size: 44px !important;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+
+
+
+
+/* contact css contact_page */
+
+
+#contact {
+    padding: var(--padding);
+    background: var(--white);
+}
+
+#contact .title {
+    font-size: 44px;
+    color: var(--Dark-Color);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 50px;
+    margin: 20px 0;
+}
+
+#contact .box-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+#contact .box-container .box input[type=text],
+#contact .box-container .box select,
+#contact .box-container .box textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+#contact .box-container .box input[type=submit] {
+    background-color: var(--Primary);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+#contact .box-container .box input[type=submit]:hover {
+    background-color: var(--Primary);
+    opacity: 0.5;
+}
+
+/* Add a background color and some padding around the form */
+#contact .box-container .box .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#contact .box-container .box iframe {
+    width: 100%;
+    height: 100%;
+}

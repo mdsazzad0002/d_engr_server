@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&family=Yeseva+One&display=swap');
+
+* {
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    box-sizing: border-box;
+}
+
+:root {
+    --Primary: rgb(31, 43, 108);
+    --white: #fff;
+    --light-white: #eee;
+    --Accent: #BFD2F8;
+    --font-yseva: Yeseva One;
+    --font-work: 'Work Sans';
+    --Secondary: #159EEC;
+}
+
+.font-yseva {
+    font-family: var(--font-yseva);
+}
+
+.font-work {
+    font-family: 'Work Sans';
+}
+
+.textc-Primary {
+    color: var(--Primary) !important;
+}
+
+.bgc-Primary {
+    background: var(--Primary) !important;
+}
+
+.textc-Accent {
+    color: var(--Accent) !important;
+}
+
+.bgc-Accent {
+    background: var(--Accent) !important;
+}
+
+.bgc-secondary {
+    background: var(--Secondary) !important;
+}
+
+.textc-secondary {
+    color: var(--Secondary) !important;
+}
+
+.active {
+    opacity: 0.5 !important;
+}
+
+html {
+    --scrollbarBG: green;
+    --thumbBG: #90A4AE;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--Primary) var(--Primary);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--Primary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+}
+
+
+/************************** header **************************/
+#header {
+    z-index: 999;
+    background: var(--white);
+
+}
+
+#header .top {
+    padding: 10px 9% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#header .top .logo {
+    font-family: var(--font-yseva);
+    font-size: 36px;
+    margin: 0;
+
+}
+
+#header .top .logo .h3 {
+    margin: 0 !important;
+}
+
+#header .top .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#header .top .box-container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .top .box-container .box i {
+    font-size: 25px;
+}
+
+#header .top .box-container .box .content {
+    margin: 0 5px !important;
+}
+
+#header .top .box-container .box .content p {
+    margin: 0;
+    padding: 0;
+}
+
+#header .top .box-container .box .content p:last-child {
+    color: var(--bs-info);
+}
+
+
+#header .menubar {
+    padding: 10px 9% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--Primary);
+
+}
+
+#header .menubar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#header .menubar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 5px !important;
+    transition: 0.3s;
+
+}
+
+#header .menubar ul li a:hover {
+    opacity: 0.5 !important;
+}
+
+#header .right-side label {
+    color: var(--white);
+    cursor: pointer;
+    margin-right: 10px !important;
+}
+
+#header .right-side a {
+    background: var(--light-white);
+    border-radius: 25px;
+    color: var(--Primary);
+    padding: 2px 15px !important;
+}
+
+#header .right-side a:hover {
+    opacity: 0.5;
+}
+
+
+/************************ hreo ************************** */
+#hero {
+    padding: 3rem 9% !important;
+    background: linear-gradient(to right, rgba(93, 92, 92, 0.5), rgba(185, 185, 185, .1)), url(../img/Physician_Trends_2021_Merritt_Hawkins\ 2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+#hero .info {
+    color: var(--Primary);
+    font-family: var(--font-yseva);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 600px;
+}
+
+#hero .btn {
+    margin: 20px 0 !important;
+    background: var(--Accent);
+    border-radius: 25px;
+    color: var(--Primary);
+    padding: 7px 12px !important;
+}
+
+#hero .card {
+    /* margin: 10px !important; */
+    padding: 15px !important;
+}
+
+
+/*************************** welcome ***********************/
+#welcome {
+    padding: 100px 0 0 0 !important;
+}
+
+
+
+/* ************************* servics ************************* */
+#servics {
+    padding: 3rem 9% !important;
+    font-family: var(--font-yseva);
+}
+
+#servics .catagory-radious p {
+    position: relative !important;
+    padding-left: 20px;
+}
+
+#servics .card {
+    border: none !important;
+}
+
+
+#servics .catagory-radious p::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+
+}
+
+
+
+#servics .card:hover,
+#servics .card:hover * {
+    border-radius: 0;
+    cursor: pointer;
+    color: var(--white) !important;
+    background: var(--Primary) !important;
+}
+
+
+/* ************************* specialties ************************* */
+#specialties {
+    padding: 0 9% 3rem 9%;
+}
+
+#specialties .card:hover,
+#specialties .card:hover * {
+    border-radius: 0;
+    cursor: pointer;
+    color: var(--white) !important;
+    background: var(--Primary) !important;
+}
+
+/* ************************* doctor ************************* */
+#doctor {
+    padding: 3rem 9%;
+}
+
+#doctor .social a {
+    width: 25px !important;
+    height: 25px !important;
+
+    font-size: 20px;
+}
+
+
+/* ************************** appoinment ***************** */
+.appoinment {
+    padding: 3rem 9%;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/Rectangle\ 33.png);
+}
+
+form {
+    overflow-x: scroll;
+    scrollbar-color: var(--Primary) var(--Primary);
+}
+
+form::-webkit-scrollbar {
+    width: 11px;
+}
+
+form::-webkit-scrollbar-thumb {
+    background-color: var(--Primary);
+    border: .5px solid var(--white);
+
+}
+
+form td,
+form td input::placeholder,
+form td input,
+form td textarea::placeholder,
+form td select,
+form td select::placeholder,
+form td textarea {
+    background: var(--Primary) !important;
+    color: var(--white) !important;
+    outline: none !important;
+    color-scheme: dark !important;
+
+}
+
+form td input::placeholder,
+form td input,
+form td textarea::placeholder,
+form td select,
+form td select::placeholder,
+form td textarea,
+form td textarea {
+    border: none !important;
+    outline: none !important;
+
+}
+
+
+/* ********************* News ***************** */
+#news {
+    padding: 0rem 9%;
+}
+
+#news .card:hover {
+    box-shadow: 0 0 2px 2px var(--light-white);
+}
+
+/* ****************** Contact ******************** */
+#contact {
+    padding: 3rem 9%;
+
+}
+
+#contact .card:hover {
+    background: var(--Primary) !important;
+    color: var(--Accent) !important;
+}
+
+#contact .col-sm-12 {
+    position: relative;
+    position: sticky !important;
+    bottom: 10px !important;
+}
+
+#contact .col-sm-12:first-child {
+    z-index: 11;
+    bottom: 50px !important;
+}
+
+#contact .col-sm-12:nth-child(1) {
+    z-index: 10;
+    bottom: 40px !important;
+}
+
+#contact .col-sm-12:nth-child(2) {
+    z-index: 9;
+    bottom: 30px !important;
+}
+
+#contact .col-sm-12:nth-child(3) {
+    z-index: 8;
+    bottom: 20px !important;
+}
+
+
+
+
+/* ********************** About Page ************ */
+/* ********************** heading ************ */
+.hadeing {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/Blackdoctors 1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 7rem 9%;
+    margin: 0 0 30px 0;
+}
+
+.review {
+    padding: 6rem 9%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Rectangle\ 53.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 20px 0;
+}
+
+.aboutus .catagory-radious p {
+    position: relative !important;
+    padding-left: 20px;
+}
+
+.aboutus .catagory-radious p::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+
+}
+
+/* ********************** Servics page ************************ */
+/* ********************** servicsus ************************ */
+.servics_us {
+    padding: 6rem 9%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.servics_us .card-body {
+    position: relative;
+}
+
+.servics_us .card-body::before,
+.servics_us .card-body::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url(../img/Vector.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -40px;
+    right: 10px;
+    z-index: 100;
+    color: var(--Primary);
+
+
+}
+
+.servics_us .card-body::before {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--Primary);
+    transform: translate(15%, -16%)
+}

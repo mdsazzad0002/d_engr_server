@@ -1,0 +1,112 @@
+  /*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+  .team {
+      padding: 120px 0;
+
+  }
+
+  .team .member {
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: 2px;
+      background: #fff;
+      box-shadow: 0px 0 6px #6b66b6;
+      position: relative;
+      width: 100%;
+
+
+  }
+
+
+
+
+  .team .member .member-img {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      /* margin: 50px auto; */
+  }
+
+
+  .member-img .img-fulid {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: all 2s ease-in-out;
+      border-radius:4px;
+  }
+
+
+  .member-img:hover .img-fulid {
+      object-position: bottom center;
+  }
+
+  .team .member .member-info {
+      height: 320px;
+      padding: 25px 15px;
+      overflow: hidden;
+
+  }
+
+
+  .team .member .member-info h4 {
+      height: 70px;
+      font-weight: 700;
+      font-size: 30px;
+      color: #000000;
+      text-align: center;
+      text-transform: capitalize;
+      text-align: left;
+      overflow: auto;
+  }
+
+
+  .team .member .member-info p {
+      margin: 10px 0 15px 0;
+      font-size: 18px;
+      color: #000000;
+      text-align: justify;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+  }
+
+
+
+  .team .member .member-info {
+      align-items: center;
+      text-align: center;
+  }
+
+  .team .member .member-info .btns_project {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+  }
+
+  .team .member .member-info .btn {
+      padding: 5px 15px;
+      opacity: 1;
+      transition: 1s;
+      background: #ffffff;
+      border: 1px solid #eee;
+      color: #000000;
+      border-radius: 5px;
+      border: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  }
+
+  .team .member .member-info .btn:hover {
+      opacity: .5;
+  }
+
+
+  @media (max-width:768px) {
+      .team .member .member-info {
+          height: auto !important;
+      }
+  }

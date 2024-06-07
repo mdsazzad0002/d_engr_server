@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #0b0527;
+    --white: #eee;
+    --mini-white: #dfdddd;
+    --mini-dark: #272727;
+    --background-hero: #00000090;
+    --display-mx-width: 1250px;
+    --orange: #e74513;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* ======================= Header menu deasing ===================================== */
+#header {
+    background-color: var(--black);
+    border-bottom: 3px solid var(--orange);
+}
+
+#header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--display-mx-width);
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+#header .container .logo {
+    height: 40px;
+    max-width: 220px;
+    cursor: pointer;
+}
+
+#header .container .logo {
+    color: var(--white);
+    line-height: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#header .container .logo span {
+    color: var(--orange);
+    margin-left: 2px;
+    font-size: 30px;
+}
+
+#header .container .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#header .container ul {
+    list-style: none;
+}
+
+#header .container ul li {
+    margin: 0 7px;
+}
+
+#header .container li a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px 10px;
+}
+
+#header .container li a:hover {
+    opacity: 0.8;
+}
+
+/* ========================
+
+Hreo section
+================================ */
+#hero {
+    background: linear-gradient(var(--background-hero), var(--background-hero)), url('portfolio-5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#hero .container {
+    text-align: center;
+    padding: 10px 20px;
+    min-height: 400px;
+    max-width: var(--display-mx-width);
+    margin: 0 auto;
+    display: grid;
+    align-content: center;
+}
+
+#hero .container .title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#hero .container p {
+    color: var(--mini-white);
+}
+
+/* ===================== News later ============================ */
+
+#news {
+    background-color: var(--black);
+}
+
+#news .container {
+    max-width: var(--display-mx-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    color: var(--white) !important;
+    font-size: 25px;
+}
+
+#news .container form input,
+#news .container form button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    font-size: 17px;
+}
+
+#news .container form button {
+    background: var(--orange);
+    color: var(--white);
+}
+
+
+@media (max-width:768px) {
+    #news .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* ============ Doing section =============== */
+#doing {
+    /* next */
+}
+
+#doing .container {
+    max-width: var(--display-mx-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+#doing .container .card {
+    flex: 1 1 200px;
+}
+
+#doing .container .card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+}
+
+
+/* ================================ footer section ================================================== */
+
+#footer {
+    background: var(--orange);
+    text-align: center;
+}
+
+#footer .container {
+    padding: 20px;
+    color: var(--white);
+
+}
+
+
+/* ============================ About page ============================================== */
+/* ============================ About section ============================================== */
+
+#aboutus .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+#aboutus .container .left {
+    grid-column: span 8;
+}
+
+#aboutus .container .left h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#aboutus .container .left p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+#aboutus .container .left p:last-child {
+    background: var(--black);
+    padding: 10px;
+    margin-right: 10px;
+    color: var(--white);
+}
+
+#aboutus .container .right {
+    grid-column: span 4;
+}
+
+#aboutus .container .right .title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+
+#aboutus .container .right .title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: var(--orange);
+}
+
+@media (max-width:768px) {
+
+    #aboutus .container .right {
+        grid-column: span 12;
+    }
+
+
+    #aboutus .container .left {
+        grid-column: span 12;
+    }
+}
+
+/* ========================= Servics page ========================================== */
+/* ========================= outservics ========================================== */
+#outservics .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+#outservics .container .left {
+    grid-column: span 8;
+}
+
+#outservics .container .right {
+    grid-column: span 4;
+}
+
+#outservics .container .left .title {
+    text-align: center;
+    border-bottom: 20px;
+    padding: 20px;
+}
+
+#outservics .container .left .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#outservics .container .left .card-container .card {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+#outservics .container .left .card-container .card h2 {
+    color: var(--black);
+    font-size: 25px;
+}
+
+#outservics .container .left .card-container .card p {
+    color: var(--mini-dark);
+    margin-bottom: 20px;
+}
+
+#outservics .container .right form {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--black);
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+#outservics .container .right form h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+#outservics .container .right form input,
+#outservics .container .right form textarea {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+}
+
+#outservics .container .right form input[type='submit'] {
+    width: 80px;
+    background: var(--orange);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+@media (max-width:768px) {
+
+    #outservics .container .right {
+        grid-column: span 12;
+    }
+
+
+    #outservics .container .left {
+        grid-column: span 12;
+    }
+}

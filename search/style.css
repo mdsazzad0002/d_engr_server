@@ -1,0 +1,35 @@
+    #search {
+        padding: 6rem 9%;
+    }
+
+    #search form.input-group .text {
+        border: 1px solid #eee;
+        font-size: 17px;
+        outline: none;
+        border-radius: 0 5px 5px 0;
+    }
+
+    #search .content_body::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    #search a.title {
+        text-decoration: none;
+        color: #6b6b6b;
+        cursor: pointer;
+    }
+
+    #search a.title:hover {
+        color: rgb(45, 145, 138);
+    }
+    svg,
+    img.image {
+        float: right;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+
+
+    }

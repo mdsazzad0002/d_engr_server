@@ -1,0 +1,103 @@
+/******************* header *******************/
+@media (max-width:991px) {
+
+    .header ul {
+        display: none;
+    }
+
+    .header .toggle_package {
+        display: flex !important;
+    }
+
+    .header .toggle_package .togglebtn {
+        display: inline-block;
+
+    }
+
+    .header ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 9%;
+        text-decoration: none;
+    }
+
+    .header ul li a:hover {
+        background: #ff6699;
+        user-select: none;
+    }
+
+    .header #toggle:checked~ul {
+        display: block;
+        position: absolute;
+        top: 100%;
+        padding: 10px 0;
+        left: 0;
+        right: 0;
+        background: #eee;
+    }
+}
+
+@media (max-width:600px) {
+    .header form {
+        display: none !important;
+    }
+
+    .header .toggle_package .search-toggle {
+        display: block;
+    }
+
+    .header #search_checkbox:checked~form {
+        position: absolute;
+        display: block !important;
+        display: flex !important;
+        /* width: 60%; */
+    }
+}
+
+@media (max-width:450px) {
+    .header #search_checkbox:checked~form {
+        position: fixed !important;
+        top: 58px !important;
+        z-index: 600;
+        background: #eee;
+    }
+
+    .header #search_checkbox:checked~form::after {
+        position: fixed;
+        top: 58px;
+        content: '';
+        width: 100%;
+        background: #eee;
+        height: 50px;
+        left: 0;
+        z-index: -1;
+
+    }
+
+
+}
+
+/* **************************** Hero ************************ */
+
+/* **************************** servics ************************ */
+@media (max-width:425px) {
+    .servics {
+        margin-top: 100px;
+    }
+}
+
+
+
+
+/* ********************* Footer ******************** */
+@media (max-width:768px) {
+    .footer .box-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width:425px) {
+    .footer .box-container {
+        grid-template-columns: auto;
+    }
+}

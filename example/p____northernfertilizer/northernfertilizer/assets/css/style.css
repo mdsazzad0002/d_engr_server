@@ -1,0 +1,455 @@
+/* common css */
+@import url('../vendor/font/Poppins/Poppins-Black.ttf');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.scroll-bar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+:root {
+    --green-deep: #1F5B44;
+    --gray: #9096A5;
+    --light: #eee;
+    --black: #3B3D40;
+    --light-green: #bbf059;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.textc-deep-green {
+    color: var(--green-deep);
+}
+
+.bgc-deep-green {
+    background: var(--green-deep);
+}
+
+.textc-gray {
+    color: var(--gray);
+}
+
+.textc-black {
+    color: var(--black);
+}
+
+.textc-light-green {
+    color: var(--light-green);
+}
+
+.bgc-light-green {
+    background: var(--light-green);
+}
+
+.height-50 {
+    height: 50px;
+}
+
+.height-100 {
+    height: 100px;
+}
+
+.height-150 {
+    height: 150px;
+}
+
+.height-180 {
+    height: 180px;
+}
+
+.height-220 {
+    height: 220px;
+}
+
+.fontc-16 {
+    font-size: 16px;
+}
+
+.fontc-18 {
+    font-size: 18px;
+}
+
+.fontc-30 {
+    font-size: 30px;
+}
+
+.fontc-40 {
+    font-size: 40px;
+}
+
+.fontc-46 {
+    font-size: 46px;
+}
+
+
+.btn-custom {
+    background: unset;
+    border: 1px solid var(--green-deep);
+    color: var(--green-deep);
+    margin-top: 5px;
+}
+
+.btn-custom:hover {
+    color: var(--light);
+    background: var(--green-deep);
+}
+
+.breadcrumb_text {
+    font-size: 55px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* end common css */
+
+
+
+/* start header-top */
+.header-top a {
+    margin: 0 !important;
+}
+
+/* end header-top */
+
+
+/* start header */
+header a {
+    font-weight: 700 !important;
+}
+
+header .dropdown .dropdown-menu {
+    background: var(--green-deep);
+    border: none;
+    padding: 0;
+    border-radius: 5px !important;
+    overflow: hidden;
+}
+
+header .dropdown .dropdown-menu .dropdown-item {
+    background: var(--green-deep) !important;
+    color: var(--light) !important;
+    padding: 10px 12px;
+}
+
+header .dropdown .dropdown-menu .dropdown-item:hover {
+    background: var(--light) !important;
+    color: var(--black) !important;
+}
+
+/* end header */
+
+
+/* start hero of swiper slider */
+.hero {
+    background: url(../img/64d75926c0a24.jpg) no-repeat center center;
+    background-attachment: scroll;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.hero .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.hero .swiper-slide .slider-width-custom {
+    padding: 100px;
+    display: block;
+    width: 80%;
+    min-width: 200px;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    cursor: e-resize;
+}
+
+.hero .swiper-button-next,
+.hero .swiper-button-prev {
+    color: var(--swiper-navigation-color, var(--light)) !important;
+}
+
+.hero .swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color, var(--light)) !important;
+}
+
+.hero .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color, var(--light)) !important;
+}
+
+.hero .autoplay-progress {
+    color: var(--light) !important;
+
+}
+
+.hero .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--light) !important;
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+/* end hero of swiper slider */
+/*end hero */
+
+
+/* start about content */
+.about {
+    padding: 3rem 0;
+}
+
+/* end about content */
+
+
+
+/* start products  */
+.products {
+    padding: 3rem 0;
+}
+
+.products .text-center,
+.products .text-center .card {
+    height: 100% !important;
+}
+
+.products .card img {
+    max-height: 150px;
+}
+
+/* end products */
+
+
+
+/* footer content start  */
+footer {
+    background: var(--green-deep);
+    padding: 3rem 0 0.5rem 0;
+}
+
+footer img.logo {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+footer img.facebook_fllower {
+
+    max-height: 150px !important;
+}
+
+footer .credit {
+    border-top: 2px solid var(--light);
+    padding-top: 10px;
+}
+
+footer .credit .social a {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .credit a i {
+    font-size: 15px;
+    margin: 0 !important;
+}
+
+/* footer end */
+
+
+
+
+
+/* *****************************************
+Contact-Us
+**********************************************/
+/* contactus hero  start*/
+.r-n-d-hero,
+.breadcrumb-hero,
+.contact-us-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/CornCrop_Lead-1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+
+/* *****************************************
+end Contact-Us
+**********************************************/
+
+
+/* *****************************************
+Contact-Us
+**********************************************/
+/* contactus hero  start*/
+.blog-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/CornCrop_Lead-1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.blog-post .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* *****************************************
+end Contact-Us
+**********************************************/
+
+
+
+/*****************************
+ start organic-fertilizer 
+ ***********************/
+.benefits {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/CornCrop_Lead-1.jpg') no-repeat center center;
+    background-size: cover;
+
+}
+
+/*****************************
+ end organic-fertilizer 
+ ***********************/
+
+
+
+/*****************************
+/balanced-fertilizer/
+ ***********************/
+
+.accordion {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.accordion .col-xl-6,
+.accordion .col-xl-3 {
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+/* .accordion .col-xl-6 {
+    margin: 7px !important;
+    width: calc(100% - 14px);
+} */
+
+.accordion img {
+    width: 100% !important;
+    min-height: 350px !important;
+}
+
+.accordion-item {
+    border: 1px solid var(--green-deep) !important;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-item:first-of-type .accordion-button,
+.accordion-item:last-of-type .accordion-button.collapsed {
+    color: #000 !important;
+    background: #fff !important;
+}
+
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+    padding-left: 35px;
+}
+
+.accordion-button::after {
+    position: absolute;
+    left: 10px;
+}
+
+.accordion-button::after {
+    background-image: url('caret-right-fill.svg') !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(90deg);
+}
+
+/*****************************
+/balanced-fertilizer/
+ ***********************/
+
+
+/* product glary page in product-glary */
+.product-glary .my-image-links {
+    margin: 10px 0;
+    display: inline-block;
+
+}
+
+.product-glary .my-image-links img {
+    max-width: 100%;
+}
+
+.product-glary .my-image-links:hover {
+    opacity: 0.5;
+    background: black;
+}
+
+/* end product glary page in prodcut-glary */
