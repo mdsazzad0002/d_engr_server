@@ -1,9 +1,9 @@
 <!-- 
 System Requirement
 --Sweper min cdn
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/swiper/swiper-bundle.min.css">
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
- -->
+  
+ --><link rel="stylesheet" type="text/css" href="<?=APP_URL?>assets/vendor/swiper/swiper-bundle.min.css">
+  <script src="<?=APP_URL?>assets/vendor/swiper/swiper-bundle.min.js"></script>
 <!-- 
 System requirement
 --CDN SCRIPT
@@ -101,20 +101,24 @@ System requirement
   background-color: #0880e8 !important;
 
 }
+
+
+
    </style>
 
     <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-title" style="padding-top: 15px; padding-bottom: 0;">
+    <section id="clients" class="clients section-title" style="padding-top: 15px; padding-bottom: 0;position:relative">
+
       <div class="container" data-aos="zoom-in">
-      <div class="section-title">
+      <!-- <div class="section-title">
           <h2>What We Use  </h2>
-        </div>
+        </div> -->
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
             <?php $s_success=$con->query("SELECT * FROM `photo_galary` WHERE `type`='success'");
             while($r_success=$s_success->fetch_assoc()){ ?>
-            <div class="swiper-slide"><img src="../image/notice/<?php echo $r_success['file']; ?>" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="<?php echo  APP_URL.'assets/img/'.$r_success['file']; ?>" class="img-fluid" alt=""></div>
           <?php } ?>
           </div>
           <div class="swiper-pagination"></div>
@@ -122,3 +126,42 @@ System requirement
 
       </div>
     </section><!-- End Clients Section -->
+
+    <script>
+          /**
+      * Clients Slider
+      */
+    new Swiper('.clients-slider', {
+        speed: 400,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        // slidesPerView: 'auto',
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   type: 'bullets',
+        //   clickable: true
+        // },
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 40
+            },
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 60
+            },
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 80
+            },
+            992: {
+                slidesPerView: 6,
+                spaceBetween: 120
+            }
+        }
+    });
+
+    </script>

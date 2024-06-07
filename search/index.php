@@ -30,20 +30,20 @@
 
     <!-- Vendor CSS Files -->
     <!-- need bootstrap -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="<?=APP_URL?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=APP_URL?>assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <!-- <link href="../assets/vendor/animate/animate.min.css" rel="stylesheet"> -->
     <!-- cdn css files -->
 
-    <link rel="stylesheet" type="text/css" href="../assets/vendor/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="../assets/vendor/boxicons/css/boxicons.css">
+    <link rel="stylesheet" type="text/css" href="<?=APP_URL?>assets/vendor/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="<?=APP_URL?>assets/vendor/boxicons/css/boxicons.css">
     <!-- <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" type="text/css" href="../assets/vendor/lightbox/lightbox.min.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="../assets/vendor/swiper/swiper-bundle.min.css"> -->
 
     <!-- Template Main CSS File -->
-    <link href="/assets/css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="<?= APP_URL;?>assets/css/style.css" rel="stylesheet">
+    <link href="<?=APP_URL?>search/style.css" rel="stylesheet">
 
     <!-- =======================================================
     starting ttcm v-0002

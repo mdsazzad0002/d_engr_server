@@ -15,7 +15,7 @@
             <tr>
 
                 <td><?php echo $i++;?></td>
-                <td><img style="width:80px; height: auto;" src="/image/logo/<?php echo $r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
+                <td><img style="width:80px; height: auto;" src="<?=APP_URL.'assets/img/';?><?php echo $r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
                 <td><a class="btn btn-primary btn-sm btn-icon-split" href="javascript:void(0)" data-toggle='modal' data-target='#logo_expand<?= $r_logo['id']; ?>'><span class="icon text-white-50"><i class="bi bi-eye-fill"></i></span><span class="text">View</span> </a>
 <!-- ================== information web short title ================== -->
 <!-- ================== information web  short title ================== -->
@@ -32,7 +32,7 @@
                           <div class="modal-body">
                             <table class="table table-bordered table-striped table-hover">
                                <tr>
-                                    <td style="text-align:center;" colspan="2"><img style="width:80px; height: auto;" src="/image/logo/<?php echo $r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
+                                    <td style="text-align:center;" colspan="2"><img style="width:80px; height: auto;" src="<?=APP_URL.'assets/img/';?><?php echo $r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
                                 </tr>
                                
                                 <tr>
@@ -86,7 +86,7 @@
             <tr>
 
                 <td><?php echo $i++;?></td>
-                <td><img style="width:80px; height: auto;" src="/image/logo/<?php echo $r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
+                <td><img style="width:80px; height: auto;" src="<?php echo APP_URL.'assets/img/'.$r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
                 <td><a class="btn btn-primary btn-sm btn-icon-split" href="javascript:void(0)" data-toggle='modal' data-target='#fav_expand<?= $r_logo['id']; ?>'><span class="icon text-white-50"><i class="bi bi-eye-fill"></i></span><span class="text">View</span> </a>
 <!-- ================== information web short title ================== -->
 <!-- ================== information web  short title ================== -->
@@ -103,7 +103,7 @@
                           <div class="modal-body">
                             <table class="table table-bordered table-striped table-hover">
                                <tr>
-                                    <td style="text-align:center;" colspan="2"><img style="width:80px; height: auto;" src="/image/logo/<?php echo $r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
+                                    <td style="text-align:center;" colspan="2"><img style="width:80px; height: auto;" src="<?php echo APP_URL.'assets/img/'.$r_logo['file']; ?>" alt="/image/ttcm.jpg"></td>
                                 </tr>
                                
                                 <tr>

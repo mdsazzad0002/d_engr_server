@@ -20,7 +20,7 @@
                                     } ?> data-aos-delay="100">
 
                 <div class="member text-center border">
-                    <div class="pic"><img src="../image/teacher/<?php echo $r_employ['file']; ?>" class="img-fluid" alt=""></div>
+                    <div class="pic"><img src="<?php echo APP_URL.'assets/img/'.$r_employ['file']; ?>" class="img-fluid" alt=""></div>
                     <div class="member-info">
                         <h4 class=""><?php echo $r_employ['name']; ?></h4>
                         <span><?php echo $r_employ['title']; ?></span>

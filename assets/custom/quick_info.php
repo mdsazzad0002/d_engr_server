@@ -21,22 +21,19 @@ if (!defined('main')) {
 <title>D Engr Web</title>
 
 <!-- GENERAL FAV ICON -->
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.png">
-<link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link href="<?= APP_URL;?>assets/img/<?=mysqli_fetch_assoc($con->query("SELECT * FROM `logo` WHERE `type`='fav'"))['file'] ?? 'loading.png';?>" rel="icon">
+
 
 
 <!-- MENEFEST FILE WITH APP INSTALL -->
-<link rel="manifest" href="/assets/img/site.webmanifest.json">
+<link rel="manifest" href="<?= APP_URL;?>assets/img/site.webmanifest.json">
 
 <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
 <meta name="twitter:card" content="Diploma Engr Web Developer" />
 <meta name="twitter:site" content="https://dengrweb.com/" />
 <meta name="twitter:creator" content="Digital Creator" />
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="/assets/img/favicon-32x32.png" />
+<meta property="twitter:image" content="<?= APP_URL;?>assets/img/favicon-32x32.png" />
 
 <meta name="twitter:description" content="Design is the easiest way to attract a user. Development is the ability of a web site to work. Marketing is about promoting or delivering your product to the user. One of them is related to each other along with the other.Very soon response. Minimal rate project. Confortable edit mode.">
 
@@ -48,21 +45,21 @@ if (!defined('main')) {
 <meta property="og:type" content="Digital Creator" />
 <meta property="og:title" content="Diploma Engr Web Developer" />
 <meta property="og:description" content="Design is the easiest way to attract a user. Development is the ability of a web site to work. Marketing is about promoting or delivering your product to the user. One of them is related to each other along with the other.Very soon response. Minimal rate project. Confortable edit mode.">
-<meta property="og:image" content="/assets/img/favicon-32x32.png" />
+<meta property="og:image" content="<?= APP_URL;?>assets/img/favicon-32x32.png" />
 
 
 
 <!-- Vendor CSS Files -->
-<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?= APP_URL;?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- VENDOR CSS ICON -->
-<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/assets/vendor/boxicons/css/boxicons.css">
-<link rel="stylesheet" type="text/css" href="/assets/vendor/swiper/swiper-bundle.min.css">
+<link href="<?= APP_URL;?>assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?= APP_URL;?>assets/vendor/boxicons/css/boxicons.css">
+<link rel="stylesheet" type="text/css" href="<?= APP_URL;?>assets/vendor/swiper/swiper-bundle.min.css">
 
 
-<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="<?= APP_URL;?>assets/vendor/aos/aos.css" rel="stylesheet">
 <!-- Template Main CSS File -->
-<link href="/assets/css/style.css" rel="stylesheet">
+<link href="<?= APP_URL;?>assets/css/style.css" rel="stylesheet">
 
 
 

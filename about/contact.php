@@ -223,7 +223,7 @@ if (!defined('main')) {
                 $row_ico = $con->query("SELECT * FROM `logo` WHERE `type`='logo'");
                 while ($row_logo = $row_ico->fetch_assoc()) {
                 ?>
-                  <img hidden src="/image/logo/<?php echo $row_logo['file']; ?>">
+                  <img hidden src="<?php echo APP_URL.'assets/img/'; ?><?php echo $row_logo['file']; ?>">
                 <?php
                 }
                 ?>

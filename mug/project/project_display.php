@@ -1,6 +1,6 @@
 <?php require_once '../../conection/index.php'; ?>
 
-<link href="/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 <div class="table-responsive">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
@@ -53,7 +53,7 @@
                 <tr>
                     <td><?= $row_si; ?></td>
 
-                    <td><?= $row_slider['id']; ?>&nbsp; &nbsp;<img onclick="copy(this)" title="Click to copy link" style="width: 50px; height:50px;" src="/image/notice/<?php echo $row_slider['file']; ?>"> </td>
+                    <td><img onclick="copy(this)" title="Click to copy link" style="width: 50px; height:50px;" src="<?php echo APP_URL.'assets/img/'.$row_slider['file']; ?>"> </td>
                     <td><?= $row_slider['name']; ?></td>
                     <th>
                         <select onchange="catagory_change(this, <?= $row_slider['id']; ?>)" class="form-control">
@@ -79,7 +79,7 @@
                                     <div class="modal-body">
                                         <table class="table table-bordered table-striped table-hover">
                                             <tr>
-                                                <td style="text-align:center;" colspan="2"><img style="max-width: 300px;" src="/image/notice/<?php echo $row_slider['file']; ?>"></td>
+                                                <td style="text-align:center;" colspan="2"><img style="max-width: 300px;" src="<?php echo APP_URL.'assets/img/'. $row_slider['file']; ?>"></td>
                                             </tr>
 
                                             <tr>
@@ -139,7 +139,7 @@
                             </span>
                         </button></td>
                     <td>
-                        <a onclick="copy_a_link(this)" title="This link can copy" class="btn btn-warning btn-sm btn-icon-split float-right ml-2" href="javascript:void(0)" data-href="https://dengrweb.com/view/?id=<?= $row_slider['id']; ?>&title=<?= $row_slider['name']; ?>"><span class="icon text-white-50"><i class="bi bi-link-45deg"></i></span><span class="text">Copy</span> </a>
+                        <a onclick="copy_a_link(this)" title="This link can copy" class="btn btn-warning btn-sm btn-icon-split float-right ml-2" href="javascript:void(0)" data-href="<?= APP_URL;?>view/?id=<?= $row_slider['id']; ?>&title=<?= $row_slider['name']; ?>"><span class="icon text-white-50"><i class="bi bi-link-45deg"></i></span><span class="text">Copy</span> </a>
 
 
                     </td>
@@ -172,6 +172,6 @@
 </div>
 
 <!-- vendor datatable plagin -->
-<script src="/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-<script src="/assets/vendor/sb-admin/js/demo/datatables-demo.js"></script>
+<script src="<?= APP_URL;?>assets/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="<?= APP_URL;?>assets/vendor/sb-admin/js/demo/datatables-demo.js"></script>

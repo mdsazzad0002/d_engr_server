@@ -6,12 +6,13 @@
       height: 100vh;
       min-height: 600px;
       max-height: 800px;
-      background: url("/assets/img/logo.jpg") right no-repeat;
       position: absolute;
       z-index: -1;
       background-size: 70vh;
-      background-position-x: 90%;
-      /* filter: blur(1px) */
+      background-position-x: 90% !important;
+      background-position-y: center!important;
+  
+      background-repeat: no-repeat !important;
   }
 
   #hero_typed {
@@ -108,7 +109,7 @@
       }
 
       #hero_bg {
-          background-position: center center;
+          background-position: center center !important;
           filter: blur(9px)
       }
   }
@@ -136,8 +137,7 @@
 # Counts
 --------------------------------------------------------------*/
   .counts {
-      background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(/assets/img/Web-Developer-skill.jpg) fixed center center;
-      background-size: cover;
+        background-size: cover;
       padding: 60px 0;
       /*  //background:#007aff;*/
       padding: 40px 0 20px 0;

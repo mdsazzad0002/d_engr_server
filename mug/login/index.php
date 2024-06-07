@@ -143,14 +143,14 @@ button{
     function redirectfull(){
          swal({title: "success",text: "Please wait just a moment!",icon: "success",button: "ok", timer: 3000,});
         setTimeout(function(){
-            window.location.href='/mug/';
+            window.location.href='<?=APP_URL;?>mug/';
         },1500)
     }
     function redirect(){
         swal({title: "error",text: "Please wait for access!",icon: "error",button: "ok", timer: 1000,});
          swal({title: "success",text: "Please wait just a moment!",icon: "success",button: "ok", timer: 3000,});
         setTimeout(function(){
-            window.location.href='/mug/';
+            window.location.href='<?=APP_URL;?>mug/';
         },2000)
     }
     function noredirect(){
@@ -161,7 +161,7 @@ button{
         },4000)
     }
 </script>
- <script src="/assets/vendor/sweetalert/sweetalert.js"></script>
+ <script src="<?= APP_URL;?>assets/vendor/sweetalert/sweetalert.js"></script>
     <?php 
         if (isset($_POST['submit'])) {
                 $emailp=$_POST['emailp'];

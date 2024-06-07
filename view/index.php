@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title><?= $row_project_info['name']; ?></title>
-                <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/bootstrap-icons.css">
+                <link rel="stylesheet" href="<?=APP_URL?>assets/vendor/bootstrap-icons/bootstrap-icons.css">
                 <!-- general meta tag -->
                 <meta charset="utf-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,31 +31,28 @@ if (isset($_GET['id'])) {
 
 
                 <!-- Linkedin Opengraph integration:https://www.linkedin.com/pulse/html-headers-og-meta-tags-david-polcari/-->
-                <meta name="url" content="https://dengrweb.com/view/?id=<?= $id; ?>" />
+                <meta name="url" content="<?=APP_URL?>view/?id=<?= $id; ?>" />
                 <meta name="type" content="ariticle" />
                 <meta name="title" content="<?= $row_project_info['name']; ?>" />
                 <meta name="description" content="<?= $row_project_info['description']; ?>">
-                <meta name="image" content="https://dengrweb.com/image/notice/<?= $row_project_info['file']; ?>" />
+                <meta name="image" content="<?=APP_URL?><?= $row_project_info['file']; ?>" />
 
 
                 <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
                 <meta name="twitter:card" content="<?= $row_project_info['name']; ?>" />
-                <meta name="twitter:site" content="https://dengrweb.com/view/?id=<?= $id; ?>" />
+                <meta name="twitter:site" content="<?=APP_URL?>view/?id=<?= $id; ?>" />
                 <meta name="twitter:creator" content="ariticle" />
 
                 <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
-                <meta property="og:url" content="https://dengrweb.com/view/?id=<?= $id; ?>" />
+                <meta property="og:url" content="<?=APP_URL?>view/?id=<?= $id; ?>" />
                 <meta property="og:type" content="ariticle" />
                 <meta property="og:title" content="<?= $row_project_info['name']; ?>" />
                 <meta property="og:description" content="<?= $row_project_info['description']; ?>">
-                <meta property="og:image" content="https://dengrweb.com/image/notice/<?= $row_project_info['file']; ?>" />
+                <meta property="og:image" content="<?=APP_URL?><?= $row_project_info['file']; ?>" />
 
                 <!-- GENERAL FAV ICON -->
-                <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-                <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
-                <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-chrome-192x192.png">
-                <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-                <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+                 <link href="<?= APP_URL;?>assets/img/<?=mysqli_fetch_assoc($con->query("SELECT * FROM `logo` WHERE `type`='fav'"))['file'] ?? 'loading.png';?>" rel="icon">
+
 
                 <style>
                     * {
@@ -291,8 +288,8 @@ if (isset($_GET['id'])) {
                 <input type="radio" name="viewsize" id="view_on_pc">
                 <section id="header">
 
-                    <a class="logo" href="/demo/">
-                        <img src="/assets/img/latest_logo.png" alt="">
+                    <a class="logo" href="<?=APP_URL?>demo/">
+                        <img src="<?= APP_URL;?>assets/img/<?=mysqli_fetch_assoc($con->query("SELECT * FROM `logo` WHERE `type`='logo'"))['file'] ?? 'loading.png';?>" alt="">
                         <!-- <span>TTCM</span> -->
                         <!-- <span>D Engr Web</span> -->
                     </a>
@@ -352,7 +349,7 @@ if (isset($_GET['id'])) {
 
                     <div class="call ">
                         <a class="reload" title="Reload this page" href=""><i class="bi bi-arrow-counterclockwise"></i></a>
-                        <a class="" href="/about?title=<?= $row_project_info['name']; ?>&id=<?= $row_project_info['id']; ?>#contact" title="Please Contacts us any help"><i class="bi bi-headset"></i>&nbsp; <span class="d-none d-lg-block">Get Quote</span></a>
+                        <a class="" href="<?=APP_URL?>about?title=<?= $row_project_info['name']; ?>&id=<?= $row_project_info['id']; ?>#contact" title="Please Contacts us any help"><i class="bi bi-headset"></i>&nbsp; <span class="d-none d-lg-block">Get Quote</span></a>
                     </div>
                 </section>
 

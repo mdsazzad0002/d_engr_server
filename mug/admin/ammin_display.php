@@ -1,7 +1,7 @@
 		<?php
 		require_once '../../conection/index.php';
 		?>
-		<link href="/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+		<link href="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 			<thead>
 				<tr>
@@ -38,7 +38,7 @@
 					<tr>
 						<td><?php $row_si++;
 							echo $row_si; ?></td>
-						<td><img onclick="copy(this)" title="Click to copy link" style="width:50px; height: 50px;" src="/image/<?php echo $student_info_row['file']; ?>" alt="/image/....jpg"></td>
+						<td><img onclick="copy(this)" title="Click to copy link" style="width:50px; height: 50px;" src="<?php echo APP_URL.'assets/img/'. $student_info_row['file']; ?>" alt="/image/....jpg"></td>
 						<td><?php echo $student_info_row['name']; ?></td>
 
 						<td><?php echo $student_info_row['email']; ?></td>
@@ -70,7 +70,7 @@
 										<div class="modal-body">
 											<table class="table table-bordered table-striped table-hover">
 												<tr>
-													<td style="text-align:center;" colspan="2"><img onclick="copy(this)" title="Click to copy link" style="width:80px; height: auto;" src="/image/<?php echo $student_info_row['file']; ?>" alt="/image/....jpg"></td>
+													<td style="text-align:center;" colspan="2"><img onclick="copy(this)" title="Click to copy link" style="width:80px; height: auto;" src="<?php echo  APP_URL.'assets/img/'.$student_info_row['file']; ?>" alt="/image/....jpg"></td>
 												</tr>
 
 												<tr>
@@ -143,6 +143,6 @@
 				<?php } ?>
 			</tbody>
 		</table>
-		<script src="/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-		<script src="/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-		<script src="/assets/vendor/datatables/datatables-demo.js"></script>
+		<script src="<?= APP_URL;?>assets/vendor/datatables/jquery.dataTables.min.js"></script>
+		<script src="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+		<script src="<?= APP_URL;?>assets/vendor/datatables/datatables-demo.js"></script>

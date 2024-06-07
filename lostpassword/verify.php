@@ -37,7 +37,7 @@
         ?>
 
         <section class="form_login_register">
-            <script src="/assets/vendor/sweetalert/sweetalert.js"></script>
+            <script src="<?= APP_URL;?>assets/vendor/sweetalert/sweetalert.js"></script>
         </section>
         <section class="form_login_register">
             <?php

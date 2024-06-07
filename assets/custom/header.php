@@ -5,7 +5,7 @@ if (!defined('main')) {
 };
 ?>
 
-<link rel="stylesheet" type="text/css" href="/assets/css/variable.css">
+<link rel="stylesheet" type="text/css" href="<?= APP_URL;?>assets/css/variable.css">
 <style type="text/css">
   /*--------------------------------------------------------------
 # Header   with pc L
@@ -330,14 +330,14 @@ $active_status = str_replace("/", "", $_SERVER['REQUEST_URI']);
 <header id="header" class="header" data-scrollto-offset="0">
   <div class="">
     <nav id="navbar" class="navbar">
-      <a href="/" class="logo">
-        <img src="/assets/img/latest_logo.png" title="D Engr Web" alt="D Engr Logo">
+      <a href="<?= APP_URL;?>" class="logo">
+        <img src="<?= APP_URL;?>assets/img/latest_logo.png" title="D Engr Web" alt="D Engr Logo">
       </a>
       <ul class="primary_menu">
         <li><a class="nav-link 
             <?php if ($active_status == '') {
               echo 'active';
-            } ?>" href="/">Home</a>
+            } ?>" href="<?= APP_URL;?>">Home</a>
         </li>
 
         <!-- dropdown megamenu -->
@@ -346,7 +346,7 @@ $active_status = str_replace("/", "", $_SERVER['REQUEST_URI']);
                 <?php if ($active_status == 'demo') {
                   echo 'active';
                 } ?>
-            " href="../demo/">
+            " href="<?= APP_URL;?>demo/">
             <span>Templates</span>
             <i class="bi bi-chevron-down dropdown-indicator"></i>
           </a>
@@ -357,13 +357,13 @@ $active_status = str_replace("/", "", $_SERVER['REQUEST_URI']);
             if (isset($_GET['catagory'])) {
             }
             ?>
-            <li><a class="" href="/demo/">All</a></li>
+            <li><a class="" href="<?= APP_URL;?>demo/">All</a></li>
             <?php
 
             $i_cata_count = 0;
             $select_cata = $con->query("SELECT * FROM `project_catagory`");
             while ($row_cata = $select_cata->fetch_assoc()) {
-              echo ' <li><a href="/demo/?catagory=' . $row_cata['catagory'] . '">' . ucfirst($row_cata['catagory']) . '</a>  </li>';
+              echo ' <li><a href="'.APP_URL.'demo/?catagory=' . $row_cata['catagory'] . '">' . ucfirst($row_cata['catagory']) . '</a>  </li>';
             } ?>
           </ul>
         </li>
@@ -371,23 +371,23 @@ $active_status = str_replace("/", "", $_SERVER['REQUEST_URI']);
 
         <li><a class="<?php if ($active_status == 'blog') {
                         echo 'active';
-                      } ?>" href="../blog/"><span>Blog</span></a>
+                      } ?>" href="<?= APP_URL;?>blog/"><span>Blog</span></a>
         </li>
 
         <li>
           <a class="nav-link  <?php if ($active_status == 'about') {
                                 echo 'active';
-                              } ?>" href="../about/">Contacts</a>
+                              } ?>" href="<?= APP_URL;?>about/">Contacts</a>
         </li>
 
         <li><a class="nav-link  <?php if ($active_status == 'faq') {
                                   echo 'active';
-                                } ?>" href="../faq/">FAQ</a>
+                                } ?>" href="<?= APP_URL;?>faq/">FAQ</a>
         </li>
 
         <li><a class="nav-link  <?php if ($active_status == 'my_profile') {
                                   echo 'active';
-                                } ?>" href="../profile/"><i class="bi bi-person"></i>&nbsp;Profile</a>
+                                } ?>" href="<?= APP_URL;?>profile/"><i class="bi bi-person"></i>&nbsp;Profile</a>
         </li>
 
 
@@ -398,7 +398,7 @@ $active_status = str_replace("/", "", $_SERVER['REQUEST_URI']);
       <input type="checkbox" name="" id="search_toggle">
 
       <div class="search_bar">
-        <form action="/search/">
+        <form action="<?= APP_URL;?>search/">
           <div class="input-group me-auto" id='serach_input'>
             <input required list="search_suggession" type="search" name='query' class="form-control" placeholder="Enter your Keyword" aria-label="Recipient's username" aria-describedby="basic-addon2">
             <button type='submit' class="input-group-text " id="basic-addon2"><i class="bi bi-search"></i></button>
@@ -430,7 +430,7 @@ $active_status = str_replace("/", "", $_SERVER['REQUEST_URI']);
     serach_keyword_load.onload = function() {
       document.querySelector('#search_suggession').innerHTML = this.responseText;
     }
-    serach_keyword_load.open("GET", "/assets/custom/search_keyword.php");;
+    serach_keyword_load.open("GET", "<?= APP_URL;?>assets/custom/search_keyword.php");;
     serach_keyword_load.send();
 
   })

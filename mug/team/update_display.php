@@ -15,7 +15,7 @@
       <div class="row">
       	<div class="col-4 mb-2">
       		<p>Current Image</p>
-      		<img style="max-width:100px; max-height: 100px" src="/image/teacher/<?php echo $row_id['file']; ?>">
+      		<img style="max-width:100px; max-height: 100px" src="<?php echo APP_URL.'assets/img/'.$row_id['file']; ?>">
       	</div>
       	<div class="col-8">
       		New Image

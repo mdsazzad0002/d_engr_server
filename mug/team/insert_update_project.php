@@ -36,7 +36,7 @@
 
         $file_tmp=$file['tmp_name'];
         $file_rename=$randstring.$file_name;
-        $file_location='../../image/teacher/'.$file_rename;
+        $file_location=ROOT_PATH.'assets/img/'.$file_rename;
 
         $file_type=$file['type'];
 
@@ -111,7 +111,7 @@
             
             $file_tmp=$file['tmp_name'];
             $file_rename=$randstring.$file_name;
-            $file_location='../../image/teacher/'.$file_rename;
+            $file_location=ROOT_PATH.'assets/img/'.$file_rename;
 
             $file_type=$file['type'];
 
@@ -126,8 +126,8 @@
                             
                          if($success_insert){
                             $prev_image=$_POST['prev'];
-                            if (file_exists('../../image/teacher/'.$prev_image)) {
-                                unlink('../../image/teacher/'.$prev_image);
+                            if (file_exists(ROOT_PATH.'assets/img/'.$prev_image)) {
+                                unlink(ROOT_PATH.'assets/img/'.$prev_image);
                             }
                             
                             move_uploaded_file($file_tmp, $file_location);

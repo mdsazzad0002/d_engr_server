@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>This is Some crateion for nessary</title>
-	<link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
 	<?php require_once '../../conection/index.php'; ?>
+	<link rel="stylesheet" type="text/css" href="<?= APP_URL;?>assets/vendor/bootstrap/css/bootstrap.min.css">
 
 </head>
 
@@ -54,20 +54,21 @@
 
 		// suscribe
 		$con->query("CREATE TABLE IF NOT EXISTS `suscribe`(id int not null AUTO_INCREMENT, name varchar(150), email varchar(150), subject varchar(5000), message varchar(5000), status varchar(150), user_type varchar(150), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY key(id))");
-		// notice
-		$create_notice = mysqli_query($con, "CREATE TABLE IF NOT EXISTS `notice`(id int(15) NOT NULL AUTO_INCREMENT, title varchar(250), description varchar(1000), video varchar(150), link varchar(1500), alert varchar(150), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY key(id))");
 
 		//  of blog
 		$create_instraction = mysqli_query($con, "CREATE TABLE IF NOT EXISTS `blog`(id int(15) NOT NULL AUTO_INCREMENT, name varchar(250),image varchar(250), description varchar(5000), user_type varchar(1500), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY key(id))");
 
 
-		// used
 		// faq
 		$create_faq = $con->query('CREATE TABLE IF NOT EXISTS `faq`(id int not null AUTO_INCREMENT, ask varchar(1500), ans varchar(5000), user_type varchar(1500), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY key(id))');
 
 
+		// project Catagory
+		$create_catagory
+			= $con->query("CREATE TABLE IF NOT EXISTS `project_catagory`(id int not null AUTO_INCREMENT,  catagory varchar(100),  user_type varchar(1500), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,  PRIMARY key(id))");
+
 		// project management
-		$create_p = $con->query("CREATE TABLE IF NOT EXISTS `project_info`(id int not null AUTO_INCREMENT, file varchar(200), video varchar(1000), demo varchar(1000), name varchar(150), feture varchar(700),  user_type varchar(1500), description varchar(1500), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,  PRIMARY key(id))");
+		$create_p = $con->query("CREATE TABLE IF NOT EXISTS `project_info`(id int not null AUTO_INCREMENT, file varchar(200), video varchar(1000), demo varchar(1000), name varchar(150), feture varchar(700), catagory varchar(100),  user_type varchar(1500), description varchar(1500), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,  PRIMARY key(id))");
 
 
 		// used
@@ -81,7 +82,15 @@
 
 
 
-		$create_quick_notification = mysqli_query($con, "CREATE TABLE IF NOT EXISTS `notification`(id int(15) NOT NULL AUTO_INCREMENT, name varchar(250), type varchar(150), link varchar(2000), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, PRIMARY key(id))");
+		// /////////////////////////////////////////////////////////////////////////
+		// Suscribe plan and user management
+		///////////////////////////////////////////////////////////////////////////
+
+		$suscription = $con->query("CREATE TABLE IF NOT EXISTS `suscription`(id int not null auto_increment,  oauth_uid varchar(11), username varchar(100), location varchar(300), from_source varchar(100), name varchar(100), email varchar(150), phone varchar(20), file varchar(750), password varchar(1000),  country varchar(50), expire varchar(50), requested varchar(150), download_times int(11), status varchar(20), plan varchar(50), checkpoint varchar(150), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,   primary key(id))");
+
+
+		 
+		$payment = $con->query("CREATE TABLE IF NOT EXISTS `payment`(id int not null auto_increment, email varchar(150), payment int(11), t_id varchar(100),  currency varchar(20), paymentMethod varchar(100),   status varchar(150), date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,   primary key(id))");
 	}
 
 
@@ -97,7 +106,7 @@
 					<button class="btn btn-primary w-100" type="submit" name="submit">Create New first time</button>
 					<br>
 					<br>
-					<a class="link" href="/mug/">Go to your home page thank?</a>
+					<a class="link" href="<?= ADMIN_APP_URL?>">Go to your home page thank?</a>
 				</div>
 			</div>
 		</form>

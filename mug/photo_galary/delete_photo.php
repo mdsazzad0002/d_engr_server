@@ -5,8 +5,8 @@
 		$s_photo=$con->query("SELECT * FROM `photo_galary` WHERE `id`='$id'");
 		while ($r_photo=$s_photo->fetch_assoc()) {
 			$file=$r_photo['file'];
-			if(file_exists('../../image/notice/'.$file)){
-				unlink('../../image/notice/'.$file);
+			if(file_exists(ROOT_PATH.'assets/img/'.$file)){
+				unlink(ROOT_PATH.'assets/img/'.$file);
 			}
 
 			$success_delete=mysqli_query($con,"DELETE FROM `photo_galary` WHERE `id`='$id'");

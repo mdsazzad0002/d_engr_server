@@ -230,7 +230,7 @@
         </div>
     </div>
     <!-- end view team information -->
-   <script src="/assets/vendor/jquery/jquery.min.js"></script>
+   <script src="<?= APP_URL;?>assets/vendor/jquery/jquery.min.js"></script>
     <script type="text/javascript">
 
         // firstime content load

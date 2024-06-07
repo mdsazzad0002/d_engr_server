@@ -24,7 +24,7 @@
     }
 
     ?>
-    <link rel="stylesheet" href="/assets/vendor/venobox/venobox.min.css">
+    <link rel="stylesheet" href="<?= APP_URL;?>assets/vendor/venobox/venobox.min.css">
 
     <link href="/blog/style.css" rel="stylesheet">
 
@@ -68,7 +68,7 @@
         echo "Not found footer";
     }
     ?>
-    <script src="/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/venobox/venobox.min.js"></script>
     <script>
         new VenoBox({
             selector: '.my-image-links',

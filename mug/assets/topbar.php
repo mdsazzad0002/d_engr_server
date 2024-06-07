@@ -50,13 +50,13 @@ if (!defined('main')) {
                 </span>
                  <?php $r_p_s = mysqli_fetch_assoc($con->query("SELECT * FROM `admin_user` WHERE `email`='$user_type'"))['file'];
                 if (empty($r_p_s) or $r_p_s == null) {
-                    $r_p_s = '/assets/img/user.png';
+                    $r_p_s = APP_URL.'assets/img/user.png';
                 } else {
-                    $r_p_s = '/image/' . $r_p_s;
+                    $r_p_s = APP_URL.'assets/img/' . $r_p_s;
                 }
                 ?>
                 <img class="img-profile rounded-circle" src="<?= $r_p_s; ?>">
-                <!-- <img class="img-profile rounded-circle" src="/assets/img/user.png"> -->
+                <!-- <img class="img-profile rounded-circle" src="<?= APP_URL;?>assets/img/user.png"> -->
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

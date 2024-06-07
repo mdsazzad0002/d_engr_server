@@ -1,3 +1,6 @@
+<?php
+require_once '../../../conection/index.php';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ck edit powered by this site</title>
-	<link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="=<?= APP_URL;?>assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 	<script src="ckeditor.js"></script>
 	<style type="text/css">
 		* {
@@ -155,8 +158,8 @@
 		?>
 		<input class="btn btn-primary w-100" type="submit" id="button_submit_form" name="submit" value="Dubble Click Submit Button">
 	</form>
-	<script src="/assets/vendor/jquery/jquery.min.js"></script>
-	<script src="/assets/vendor/sweetalert/sweetalert.js"></script>
+	<script src="<?= APP_URL;?>assets/vendor/jquery/jquery.min.js"></script>
+	<script src="<?= APP_URL;?>assets/vendor/sweetalert/sweetalert.js"></script>
 	<script type="text/javascript">
 		CKEDITOR.replace('editor');
 		document.addEventListener("DOMContentLoaded", (e) => {

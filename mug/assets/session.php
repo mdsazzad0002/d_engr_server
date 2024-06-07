@@ -7,8 +7,9 @@
         if (!isset($_SESSION['half'])) {
             
          $url=$_SERVER['PHP_SELF'];
+        
          $url=explode('/',$url);
-         if ($url[2]!='login') {
+         if ($url[count($url)-2]!='login') {
               echo "<script>console.log('We are not found session_id')</script>";
               echo "<script>window.location.href='../login/'</script>";
               exit();

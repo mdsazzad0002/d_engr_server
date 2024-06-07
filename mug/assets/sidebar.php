@@ -30,11 +30,11 @@ if (!defined('main')) {
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashbord/">
         <div class="sidebar-brand-icon /*rotate-n-15*/">
             <?php $s_logo = mysqli_fetch_assoc($con->query("SELECT * FROM `logo` WHERE `type`='logo'"));
-            $logo = $s_logo['file'];
+            $logo = $s_logo['file'] ?? 'loading.png';
             ?>
-            <img class="/*rounded-circle*/" style="width: 70px; height: 40px;" src="/image/logo/<?= $logo; ?>">
+            <img class="/*rounded-circle*/" style="width: 70px; height: 40px;" src="<?=APP_URL.'assets/img/'. $logo; ?>">
         </div>
-        <div class="sidebar-brand-text mx-3"><?php echo $s_title = mysqli_fetch_assoc($con->query("SELECT * FROM `web_title` WHERE `type`='title'"))['title']; ?></div>
+        <div class="sidebar-brand-text mx-3"><?php echo $s_title = mysqli_fetch_assoc($con->query("SELECT * FROM `web_title` WHERE `type`='title'"))['title'] ?? 'D Engr Web'; ?></div>
     </a>
 
     <!-- Divider -->
@@ -151,7 +151,7 @@ if (!defined('main')) {
         <li class="nav-item <?php if ($active == 'viewSite') {
                                 echo 'active';
                             } ?>">
-            <a class="nav-link " href="/">
+            <a class="nav-link " href="<?=APP_URL;?>">
                 <i class="bi bi-box-arrow-up-right"></i>
                 <span>Visit Site</span></a>
         </li>

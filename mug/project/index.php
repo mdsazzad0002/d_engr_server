@@ -27,7 +27,7 @@ require_once '../../conection/index.php';
     require_once '../assets/quick_info.php';
     ?>
 
-    <!-- <link rel="stylesheet" type="text/css" href="/assets/vendor/lightbox/lightbox.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="<?= APP_URL;?>assets/vendor/lightbox/lightbox.min.css"> -->
     <!-- only this page style -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -86,7 +86,7 @@ require_once '../../conection/index.php';
     require_once '../assets/last_footer.php';
     ?>
 
-    <!-- <script type="text/javascript" src="/assets/vendor/lightbox/lightbox.min.js"></script> -->
+    <!-- <script type="text/javascript" src="<?= APP_URL;?>assets/vendor/lightbox/lightbox.min.js"></script> -->
     <!-- <script type="text/javascript" src="message.js"></script> -->
 
 

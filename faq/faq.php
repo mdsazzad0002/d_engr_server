@@ -187,7 +187,7 @@
 
       <!-- start col -->
       <div class="col-lg-4 d-none d-lg-block">
-        <img class="img-fluid" src="/assets/img/details-1.png">
+        <img class="img-fluid" src="<?= APP_URL;?>assets/img/details-1.png">
       </div>
       <!-- end col -->
     </div>

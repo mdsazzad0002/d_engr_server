@@ -64,7 +64,7 @@ if (!defined('main')) {
 
     <div class="row content">
       <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-        <img src="/assets/img/logo.jpg" class="img-fluid">
+        <img src="<?= APP_URL;?>assets/img/logo.jpg" class="img-fluid">
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
         <h2>D Engr Web</h2>

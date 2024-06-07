@@ -20,10 +20,10 @@
     ?>
 
 
-            <a href="/view/?id=<?= $row['id']; ?>" class="title col-xl-6 col-md-12 mb-2">
+            <a href="<?=APP_URL?>view/?id=<?= $row['id']; ?>" class="title col-xl-6 col-md-12 mb-2">
                 <div>
                     <div class=" border rounded content_body p-2">
-                        <img loading="lazy" title="Please try again...." class="image" src="/image/notice/<?= $row['file']; ?>" alt="&nbsp;Please try again...">
+                        <img loading="lazy" title="Please try again...." class="image" src="<?php echo APP_URL.'assets/img/'; ?><?= $row['file']; ?>" alt="&nbsp;Please try again...">
                         <div class="h4 text-align-justify">
                             <?= $row['name']; ?>
 
@@ -54,10 +54,10 @@
     ?>
 
 
-            <a href="/blog/?id=<?= $row['id']; ?>" class="title col-xl-6 col-md-12 mb-2">
+            <a href="<?=APP_URL?>blog/?id=<?= $row['id']; ?>" class="title col-xl-6 col-md-12 mb-2">
                 <div>
                     <div class=" border rounded content_body p-2">
-                        <img loading="lazy" class="image" src="<?= $row['image']; ?>" alt="Please wait.....">
+                        <img loading="lazy" class="image" src="<?=$row['image']; ?>" alt="Please wait.....">
                         <div class="h4 text-align-justify">
                             <?= $row['name']; ?>
 

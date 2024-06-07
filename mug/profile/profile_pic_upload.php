@@ -24,15 +24,15 @@ if (isset($_POST['user_type'])) {
 
 		$s_r_pic = mysqli_fetch_assoc($con->query("SELECT * FROM `admin_user` WHERE `email`='$user_type'"))['file'];
 		if (!empty($s_r_pic)) {
-			if (file_exists('../../image/' . $s_r_pic)) {
-				unlink('../../image/' . $s_r_pic);
+			if (file_exists(ROOT_PATH.'assets/img/'. $s_r_pic)) {
+				unlink(ROOT_PATH.'assets/img/'. $s_r_pic);
 			}
 		}
 
 
 		$update = $con->query("UPDATE `admin_user` SET `file`='$file_name' WHERE `email` ='$user_type'");
 		if ($update) {
-			$move = move_uploaded_file($tmp_name, '../../image/' . $file_name);
+			$move = move_uploaded_file($tmp_name, ROOT_PATH.'assets/img/'. $file_name);
 			if ($move) {
 				$data_alert['i_icon'] = 'success';
 				$data_alert['i_title'] = 'Successfully Updated';

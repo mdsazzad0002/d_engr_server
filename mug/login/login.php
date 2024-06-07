@@ -38,21 +38,21 @@
     </title>
    
     <!-- light box model css -->
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/lightbox/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= APP_URL;?>assets/vendor/lightbox/lightbox.min.css">
     
     <!-- VENDOR CSS ICON -->
-    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/vendor/boxicons/css/boxicons.css">
-    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="<?= APP_URL;?>assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?= APP_URL;?>assets/vendor/boxicons/css/boxicons.css">
+    <link href="<?= APP_URL;?>assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
     <!-- Vendor datatable css -->
-    <link href="/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
-    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= APP_URL;?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="/assets/vendor/sb-admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?= APP_URL;?>assets/vendor/sb-admin/css/sb-admin-2.min.css" rel="stylesheet">
   </head>
 
 <body id="page-top">
@@ -132,22 +132,22 @@
 
     
     <!-- lightbox model js -->
-    <script type="text/javascript" src="/assets/vendor/lightbox/lightbox.min.js"></script>
+    <script type="text/javascript" src="<?= APP_URL;?>assets/vendor/lightbox/lightbox.min.js"></script>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/assets/vendor/bootstrap4.6/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/bootstrap4.6/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- vendor datatable plagin -->
-    <script src="/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-    <script src="/assets/vendor/sb-admin/js/demo/datatables-demo.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/sb-admin/js/demo/datatables-demo.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="/assets/vendor/sb-admin/js/sb-admin-2.min.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/sb-admin/js/sb-admin-2.min.js"></script>
 </body>
 </html>
 

@@ -1,6 +1,6 @@
 <?php
 if (!defined('main')) {
-  echo "<script>window.location.href='../'</script>";
+  echo "<script>window.location.href='<?= ADMIN_APP_URL;?>'</script>";
   exit();
 };
 ?>

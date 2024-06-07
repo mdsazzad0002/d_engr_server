@@ -19,11 +19,8 @@
     }
 
     ?>
-    <link href="/home-1/style.css" rel="stylesheet">
+    <link href="<?= APP_URL; ?>home-1/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-    starting ttcm v-0002
-  ======================================================== -->
 </head>
 
 <body>
@@ -39,7 +36,7 @@
 
 
         <!-- ======= hero_typed Section ======= -->
-        <section id="hero_bg">
+        <section id="hero_bg" style='background: url("<?= APP_URL; ?>assets/img/logo.jpg")'>
 
         </section>
         <section id="hero_typed" class="d-flex flex-column justify-content-center">
@@ -59,8 +56,8 @@
                     <a href="https://www.linkedin.com/in/dengrweb1/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                 </div>
                 <div class="btns">
-                    <a href="/demo/">See Demo</a>
-                    <a href="/about/#contact">Hire Us</a>
+                    <a href="<?= APP_URL; ?>demo/">See Demo</a>
+                    <a href="<?= APP_URL; ?>about/#contact">Hire Us</a>
                 </div>
             </div>
         </section><!-- End hero_typed -->
@@ -68,7 +65,7 @@
 
 
         <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts">
+        <section id="counts" class="counts" style="background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(<?= APP_URL; ?>assets/img/Web-Developer-skill.jpg) fixed center center;">
             <div class="container">
 
                 <div class="row counters">
@@ -81,7 +78,7 @@
                     </div>
 
                     <div class="col-lg-3 col-6 text-center">
-                        <a href="/demo/">
+                        <a href="<?= APP_URL; ?>demo/">
                             <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `project_info`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
                             <p>Projects</p>
                         </a>
@@ -95,7 +92,7 @@
                     </div>
 
                     <div class="col-lg-3 col-6 text-center">
-                        <a href="/about#team">
+                        <a href="<?= APP_URL; ?>about#team">
                             <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `employ`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
                             <p>Hard Workers</p>
                         </a>
@@ -244,8 +241,8 @@
 
     <?php
     // header or navbar section
-    if (file_exists('assets/custom/footer.php')) {
-        require_once 'assets/custom/footer.php';
+    if (file_exists(ROOT_PATH . 'assets/custom/footer.php')) {
+        require_once ROOT_PATH . 'assets/custom/footer.php';
     } else {
         echo "Not found footer";
     }
@@ -253,10 +250,33 @@
     ?>
 
 
-    <script src="/assets/vendor/purecounter/purecounter_vanilla.js" crossorigin="anonymous"></script>
-    <script src="/assets/vendor/waypoints/noframework.waypoints.js" crossorigin="anonymous"></script>
-    <script src="/assets/vendor/typed.js/typed.min.js" crossorigin="anonymous"></script>
-    <script src="/home-1/home-1.js"></script>
+    <script src="<?= APP_URL; ?>assets/vendor/purecounter/purecounter_vanilla.js" crossorigin="anonymous"></script>
+    <script src="<?= APP_URL; ?>assets/vendor/waypoints/noframework.waypoints.js" crossorigin="anonymous"></script>
+    <script src="<?= APP_URL; ?>assets/vendor/typed.js/typed.min.js" crossorigin="anonymous"></script>
+    <script src="<?= APP_URL; ?>home-1/home-1.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // add shedule for data
+            let timing_func = 0;
+
+            function load_content(sorce_url, place_class, place_method, time) {
+                setTimeout(function() {
+                    timing_func += time;
+                    const xhttp = new XMLHttpRequest();
+
+                    xhttp.onload = function() {
+                        document.querySelector(`.${place_class}`).innerHTML = this.responseText;
+                    }
+                    xhttp.open(place_method, sorce_url, true);
+                    xhttp.send();
+                }, timing_func)
+            }
+            setTimeout(() => {
+                load_content("<?= APP_URL; ?>home-1/team.php", "team", "GET", 1500);
+            }, 100);
+        });
+    </script>
 </body>
 
 </html>

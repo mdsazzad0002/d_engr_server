@@ -1,4 +1,5 @@
 <?php
+require_once '../../../conection/index.php';
 $data_arry = array();
 $data_arry['i_icon'] = 'error';
 $data_arry['i_title'] = 'Something is Wrong';
@@ -27,15 +28,15 @@ if (isset($_FILES['file'])) {
 
     // catch file name
     $file_name = $file['name'];
-    $file_name = '/image/blog/' . random_string(100) . "." . $file_type_extend[1];
+    $file_name = 'blog_image_'. random_string(100) . "." . $file_type_extend[1];
 
     // temp name
     $file_tmp = $file['tmp_name'];
 
     if ($file_type == 'image') {
-        if (move_uploaded_file($file_tmp, '../../..' . $file_name)) {
+        if (move_uploaded_file($file_tmp, ROOT_PATH.'assets/img/'. $file_name)) {
             $data_arry['i_icon'] = 'success';
-            $data_arry['i_title'] = 'http://' . $_SERVER['SERVER_NAME']  . $file_name;
+            $data_arry['i_title'] = APP_URL.'assets/img/'. $file_name;
         } else {
             $data_arry['i_icon'] = 'error';
             $data_arry['i_title'] = 'Plase slect Lowest size image upload fast';

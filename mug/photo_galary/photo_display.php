@@ -2,7 +2,7 @@
         require_once '../../conection/index.php';
     } ?>
 
-	<link href="/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+	<link href="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 	<div class="table-responsive">
 	    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 	        <thead>
@@ -39,7 +39,7 @@
                 ?>
 	                <tr>
 	                    <td><?= $row_si; ?></td>
-	                    <td><img onclick="copy(this)" title="Click to copy url " style="width: 50px; height:50px;" src="/image/notice/<?= $row_slider['file']; ?>" alt=""></td>
+	                    <td><img onclick="copy(this)" title="Click to copy url " style="width: 50px; height:50px;" src="<?= APP_URL.'assets/img/'.$row_slider['file']; ?>" alt=""></td>
 	                    <td><?= $row_slider['name']; ?></td>
 	                    <td> <?php echo $row_slider['type']; ?></td>
 
@@ -135,6 +135,6 @@
 	</div>
 
 
-	<script src="/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-	<script src="/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-	<script src="/assets/vendor/datatables/datatables-demo.js"></script>
+	<script src="<?= APP_URL;?>assets/vendor/datatables/jquery.dataTables.min.js"></script>
+	<script src="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+	<script src="<?= APP_URL;?>assets/vendor/datatables/datatables-demo.js"></script>

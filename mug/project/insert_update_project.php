@@ -41,7 +41,7 @@
 
         if(!empty($_FILES['file']['name'])){
                    $file_rename=getRandomString(50).$file_name;
-                  $file_location='../../image/notice/'.$file_rename;
+                  $file_location=ROOT_PATH.'assets/img/'.$file_rename;
 
                   $file_expend=explode('/', $_FILES['file']['type']);
 
@@ -52,14 +52,14 @@
                         echo '<p class="p-2 bg-danger text-light">We are  failed plase try again</p>';
                           
                     }else{
-                         $success_insert=mysqli_query($con,"INSERT INTO `project_info`(`file`, `video`, `demo`, `name`, `description`, `feture`, `user_type`) VALUES ('$file_rename','$vlink', '$dlink','$name','$description','$feature','$user_type')");
-             
+                          $success_insert=mysqli_query($con,"INSERT INTO `project_info`(`file`, `video`, `demo`, `name`, `description`, `feture`, `user_type`) VALUES ('$file_rename','$vlink', '$dlink','$name','$description','$feature','$user_type')");
+
                         
                           if($success_insert){
                             move_uploaded_file($file_tmp, $file_location);
                               echo '<p class="p-2 bg-success text-light">We are  Success</p>';
                           }else{
-                              echo '<p class="p-2 bg-danger text-light">Database err q</p>';
+                              echo '<p class="p-2 bg-danger text-light">Database err</p>';
                           }
                     }
                   }else{
@@ -123,7 +123,7 @@
             $file_tmp=$file['tmp_name'];
             
             $file_rename=getRandomString(50).$file_name;
-            $file_location='../../image/notice/'.$file_rename;
+            $file_location=ROOT_PATH.'assets/img/'.$file_rename;
 
             $file_expend=explode('/', $_FILES['file']['type']);
             $image_extension=$file_expend[0];
@@ -139,8 +139,8 @@
                      
                      if($success_insert){
                         
-                        if (file_exists('../../image/notice/'.$prev)) {
-                            unlink('../../image/notice/'.$prev);
+                        if (file_exists(ROOT_PATH.'assets/img/'.$prev)) {
+                            unlink(ROOT_PATH.'assets/img/'.$prev);
                         }
                         move_uploaded_file($file_tmp, $file_location);
                          echo '<p class="p-2 bg-success text-light">We are Success</p>';

@@ -16,7 +16,7 @@
 
   ?>
 
-  <link href="/demo/style.css" rel="stylesheet">
+  <link href="<?=APP_URL;?>demo/style.css" rel="stylesheet">
 
   <!-- =======================================================
     starting ttcm v-0002
@@ -92,8 +92,8 @@
         <div class="row">
           <!-- image col5 -->
           <div class="col-md-5">
-            <div class="member-img text-center align-items-center justify-between-center">
-              <img src="../image/notice/${data_array['image']}" class="img-fulid" alt="" />
+            <div class="member-img text-center align-items-center justify-between-center p-1">
+              <img src="<?=APP_URL.'assets/img/';?>${data_array['image']}" class="img-fulid" alt="" />
 
             </div>
           </div>
@@ -109,7 +109,7 @@
 
      
               <div class="btns_project">
-                <a target="_blank" href="/view/?id=${data_array['project_id']}" title="View this Templates" class="btn  ">
+                <a target="_blank" href="<?=APP_URL;?>view/?id=${data_array['project_id']}" title="View this Templates" class="btn  ">
                 <i class="bi bi-arrow-up-right-square ">&nbsp;</i> Live Demo</a>
 
                 <a  href="/profile/?download=${data_array['project_id']}" title="Download  this Website templates" class="btn"><i class="bi bi-download"></i>&nbsp;</i> Free DownLoad</a>

@@ -59,7 +59,7 @@
   }
   ?>
   <!-- Vendor JS Files -->
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?=APP_URL?>assets/vendor/php-email-form/validate.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
       require_once '../../conection/index.php';
       $row_id=mysqli_fetch_assoc($con->query("SELECT * FROM `project_info` WHERE `id`='$id'"));
       ?>
-      <h3 class="display-1 text-center"><img class="w-25" src="../../image/notice/<?= $row_id['file'];?>"></h3>                         
+      <h3 class="display-1 text-center"><img class="w-25" src="<?php echo APP_URL.'assets/img/'.$row_id['file']; ?>"></h3>                         
       <input type="number" name="id" hidden value="<?= $id;?>">
       <input type="text" name="prev" hidden value="<?= $row_id['file'];?>">
     <!-- link input -->

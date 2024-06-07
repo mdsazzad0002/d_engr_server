@@ -5,8 +5,8 @@
 			$id=$_POST['id'];
 
 		$select_file=mysqli_fetch_assoc($con->query("SELECT * FROM `project_info` WHERE `id`='$id'"))['file'];
-		if(file_exists('../../image/notice/'.$select_file)){
-			unlink('../../image/notice/'.$select_file);
+		if(file_exists(ROOT_PATH.'assets/img/'.$select_file)){
+			unlink(ROOT_PATH.'assets/img/'.$select_file);
 		}else{
 			echo "We are not found file";
 		}

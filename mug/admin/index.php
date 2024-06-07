@@ -64,7 +64,7 @@ require_once '../../conection/index.php';
                     }else{?>
 
                     <a href="../">
-                        <img class="img-fluid" src="/assets/img/403.webp">
+                        <img class="img-fluid" src="<?= APP_URL;?>assets/img/403.webp">
                     </a>
                         <?php
                     }

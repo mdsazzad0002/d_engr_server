@@ -395,7 +395,7 @@ Suscribe
         <div class="col-lg-6">
           <h4>Join Our Newsletter</h4>
           <p class="">Subscribe to our newsletter to receive emails about new template releases and updates</p>
-          <form id="sub_from" action="forms/contact.php" method="post" class="sus">
+          <form id="sub_from" action="<?=APP_URL?>forms/contact.php" method="post" class="sus">
             <input id="suscribe" required placeholder="Enter your email address" type="email" name="suscribe">
 
             <input type="submit" value="Subscribe" id="btn-suscribe">
@@ -451,7 +451,11 @@ Suscribe
 <!-- ------------------------------------
 # Verify suscribe
 ----------------------------------- -->
-
+<?php 
+  if(file_exists(ROOT_PATH.'assets/custom/client.php')){
+    require_once(ROOT_PATH.'assets/custom/client.php');
+  }
+?>
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="footer-top">
@@ -463,7 +467,11 @@ Suscribe
 
         <div class="col-lg-3 col-md-6">
           <div class="footer-info">
-            <h3><?php echo $r_web_title = mysqli_fetch_assoc($con->query("SELECT * FROM `web_title` WHERE `type`='title'"))['title']; ?><span>.</span></h3>
+            <h3><?php 
+            echo  $r_web_title = mysqli_fetch_assoc($con->query("SELECT * FROM `web_title` WHERE `type`='title'"))['title'] ?? '';
+            
+             
+             ?><span>.</span></h3>
             <?php
             $s_information = $con->query("SELECT * FROM `information`");
             while ($r_info = $s_information->fetch_assoc()) {
@@ -537,7 +545,7 @@ Suscribe
   <div class="container">
     <div class="row">
       <div class="col-md-4 text-center p-4">
-        <a class="text-light" href="/sitemap/">Site Map</a>
+        <a class="text-light" href="<?=APP_URL?>sitemap">Site Map</a>
       </div>
       <div class="col-md-4">
         <?php $s_information = $con->query("SELECT * FROM `web_title` WHERE `type`= 'title'");
@@ -586,16 +594,16 @@ Suscribe
 
 
 <!-- Vendor JS Files -->
-<script src="/assets/vendor/jquery/jquery.min.js" crossorigin="anonymous"></script>
+<script src="<?= APP_URL;?>assets/vendor/jquery/jquery.min.js" crossorigin="anonymous"></script>
 
-<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script> -->
-<script type="text/javascript" src="/assets/vendor/sweetalert/sweetalert.js">
+<script src="<?= APP_URL;?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="<?= APP_URL;?>assets/vendor/glightbox/js/glightbox.min.js"></script> -->
+<script type="text/javascript" src="<?= APP_URL;?>assets/vendor/sweetalert/sweetalert.js">
 </script>
 
 
 <!-- Template Main JS File -->
-<script src="/assets/js/main.js"></script>
+<script src="<?= APP_URL;?>assets/js/main.js"></script>
 <script>
   // google translate
   function googleTranslateElementInit() {
@@ -606,7 +614,7 @@ Suscribe
 </script>
 
 <!-- aos library -->
-<script src="/assets/vendor/aos/aos.js" crossorigin="anonymous"></script>
+<script src="<?= APP_URL;?>assets/vendor/aos/aos.js" crossorigin="anonymous"></script>
 
 <?php
 if (file_exists('../email_function_organize/index.php')) {
@@ -626,7 +634,7 @@ if (file_exists('../email_function_organize/index.php')) {
     e.preventDefault();
     $.ajax({
       type: "POST",
-      url: '/suscribe/send_mail.php',
+      url: '<?=APP_URL?>suscribe/send_mail.php',
       processData: false,
       contentType: false,
       data: new FormData(this),

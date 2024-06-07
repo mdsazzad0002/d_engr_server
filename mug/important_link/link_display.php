@@ -5,7 +5,7 @@
 		}
 	 ?>
 
-		<link href="/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+		<link href="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 		 <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
@@ -130,6 +130,6 @@
         </div>
 
 
-    <script src="/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-		<script src="/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-		<script src="/assets/vendor/datatables/datatables-demo.js"></script>
+    <script src="<?= APP_URL;?>assets/vendor/datatables/jquery.dataTables.min.js"></script>
+		<script src="<?= APP_URL;?>assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+		<script src="<?= APP_URL;?>assets/vendor/datatables/datatables-demo.js"></script>

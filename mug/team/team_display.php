@@ -39,7 +39,7 @@ require_once '../../conection/index.php';
     ?>
       <tr>
         <td><?= $row_si; ?></td>
-        <td><img onclick="copy(this)" title="Click to copy link" style="width: 50px; height:50px" src="/image/teacher/<?= $row_slider['file']; ?>" alt="plase wait"></td>
+        <td><img onclick="copy(this)" title="Click to copy link" style="width: 50px; height:50px" src="<?= APP_URL.'assets/img/'.$row_slider['file']; ?>" alt="plase wait"></td>
 
         <td><?= $row_slider['name']; ?></td>
         <td><?= $row_slider['title']; ?></td>
@@ -60,7 +60,7 @@ require_once '../../conection/index.php';
                 <div class="modal-body">
                   <table class="table table-bordered table-striped table-hover">
                     <tr>
-                      <td style="text-align:center;" colspan="2"><img onclick="copy(this)" title="Click to copy link" style="max-width: 100px;" src="/image/teacher/<?php echo $row_slider['file']; ?>"></td>
+                      <td style="text-align:center;" colspan="2"><img onclick="copy(this)" title="Click to copy link" style="max-width: 100px;" src="<?php echo APP_URL.'assets/img/'.$row_slider['file']; ?>"></td>
                     </tr>
 
                     <tr>

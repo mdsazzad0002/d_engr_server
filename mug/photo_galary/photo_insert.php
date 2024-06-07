@@ -21,7 +21,7 @@
                             $type=str_replace("'","\'",$type);
 
                             $file_rename=$file_name;
-                            $file_location='../../image/notice/'.$file_rename;
+                            $file_location=ROOT_PATH.'assets/img/'.$file_rename;
                             $file_expend=explode('.', $file_name);
                             $image_extension=end($file_expend);
                             if($image_extension=='jpg' OR $image_extension=='png' OR $image_extension=='gif' OR $image_extension=='jpeg' OR $image_extension=='JPG' OR $image_extension=='PNG' OR $image_extension=='GIF' OR $image_extension=='JPEG' OR $image_extension= 'pdf' OR $image_extension= 'PDF'){

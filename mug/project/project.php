@@ -173,7 +173,7 @@ if (!defined('main')) {
     </div>
   </div>
 
-  <script type="text/javascript" src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="<?= APP_URL;?>assets/vendor/jquery/jquery.min.js"></script>
   <script type="text/javascript">
     // insert porject by ajax
     $('#project_Insert').on("submit", function(e) {

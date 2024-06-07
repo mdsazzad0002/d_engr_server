@@ -1,16 +1,23 @@
 <?php
+if(file_exists('../config.php')){
+    require_once '../config.php';
+}elseif(file_exists('config.php')){
+    require_once 'config.php';
+}elseif(file_exists('../../config.php')){
+    require_once '../../config.php';
+}elseif(file_exists('../../../config.php')){
+    require_once '../../../config.php';
+}elseif(file_exists('../../../../config.php')){
+    require_once '../../../../config.php';
+}
 
-	$host= 'localhost';
-	$username='root';
-	$password='';
-	$dbname='d_web';
-	$con=new mysqli($host, $username, $password, $dbname);
-	
 
-    // Check connection
-    if ($con -> connect_errno) {
-      echo "Failed to connect to MySQL: " . $con -> connect_error;
-      exit();
-    }
-?>
-	
+
+$host = DB_HOST;
+$username = DB_USER;
+$password = DB_PASSWORD;
+$dbname = DB_NAME;
+
+$con = mysqli_connect($host, $username, $password, $dbname);
+
+

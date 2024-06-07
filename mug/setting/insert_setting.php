@@ -29,7 +29,7 @@
                 $insert=$con->query("INSERT INTO `logo`(`file`, `type`, `user_type`) VALUES ('$logo1_name','logo','$user_type')");
 
                 if ($insert) {
-                   $mov= move_uploaded_file($logo1_tmp,'../../image/logo/'.$logo1_name);
+                   $mov= move_uploaded_file($logo1_tmp,ROOT_PATH.'assets/img/'.$logo1_name);
                     if($mov) {
 	                	echo "<p class='bg-success p-2 rounded text-light d-block'>Note: Success insert Web title</p>";
 	                }
@@ -47,7 +47,7 @@
                 $insert=$con->query("INSERT INTO `logo`(`file`, `type`,`user_type`) VALUES ('$logo1_name','fav','$user_type')");
                 
                 if ($insert) {
-                    $mov=move_uploaded_file($logo1_tmp,'../../image/logo/'.$logo1_name);
+                    $mov=move_uploaded_file($logo1_tmp,ROOT_PATH.'assets/img/'.$logo1_name);
 	                   if($mov) {
 	                	echo "<p class='bg-success p-2 rounded text-light d-block'>Note: Success insert Web title</p>";
 	                }

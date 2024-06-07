@@ -15,7 +15,7 @@ $con->query("CREATE TABLE IF NOT EXISTS `visitor`(id int not null AUTO_INCREMENT
 		
 
     if (!defined('main')) {
-         echo "<script>window.location.href='/index.php'</script>";
+         echo "<script>window.location.href='".APP_URL."index.php'</script>";
         exit();
      } ;
 
