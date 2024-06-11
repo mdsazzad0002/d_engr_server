@@ -42,7 +42,7 @@
 
         $file_expend=explode('/', $file_type);
         $image_extension=$file_expend[0];
-        if($image_extension=='image'){
+        if($image_extension=='image'){ 
             if (file_exists($file_rename)) {
                  
                 echo 'Sorry, file already exists!';
