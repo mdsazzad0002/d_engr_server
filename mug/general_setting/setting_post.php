@@ -25,4 +25,6 @@ if(isset($_POST['settings'])){
 }
 
 
+
+
 echo "<script>window.history.back();</script>";
