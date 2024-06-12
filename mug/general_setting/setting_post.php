@@ -3,7 +3,7 @@ require_once '../../conection/index.php';
 
 if(isset($_POST['settings'])){
     $data = $_POST;
-    print_r($data);
+    // print_r($data);
     $data = array_diff_key($data, ['settings' => true]);
 
     foreach ($data as $key => $value) {
