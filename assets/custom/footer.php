@@ -575,7 +575,7 @@ Suscribe
       </div>
       <div id="google_translate_element"></div>
 
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 
 
@@ -617,13 +617,13 @@ Suscribe
 <script src="<?= APP_URL;?>assets/vendor/aos/aos.js" crossorigin="anonymous"></script>
 
 <?php
-if (file_exists('../email_function_organize/index.php')) {
-  require_once('../email_function_organize/index.php');
-} elseif (file_exists('../../email_function_organize/index.php')) {
-  require_once '../../email_function_organize/index.php';
-} elseif (file_exists('email_function_organize/index.php')) {
-  require_once 'email_function_organize/index.php';
-}
+// if (file_exists('../email_function_organize/index.php')) {
+//   require_once('../email_function_organize/index.php');
+// } elseif (file_exists('../../email_function_organize/index.php')) {
+//   require_once '../../email_function_organize/index.php';
+// } elseif (file_exists('email_function_organize/index.php')) {
+//   require_once 'email_function_organize/index.php';
+// }
 ?>
 <script>
   // data aos init

@@ -1,4 +1,4 @@
-<?php require_once 'conection/index.php'; ?>
+<?php require_once   'conection/index.php'; ?>
 <?php define('main', 420); ?>
 
 
@@ -27,8 +27,8 @@
     <main id="main">
         <?php
         // header or navbar section
-        if (file_exists('assets/custom/header.php')) {
-            require_once 'assets/custom/header.php';
+        if (file_exists(ROOT_PATH . 'assets/custom/header.php')) {
+            require_once ROOT_PATH .'assets/custom/header.php';
         } else {
             echo "Not found header";
         }
