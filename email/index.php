@@ -23,7 +23,7 @@ $mail = new PHPMailer(true);
 // $phpmailer->Password = 'a1277ade6e6e0a';
 
 $data_response = [];
-try {
+// try {
 
 
 
@@ -35,7 +35,7 @@ try {
 
         
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->SMTPDebug = 1;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host = setting('smtp_server',$con);                     //Set the SMTP server to send through
         $mail->SMTPAuth = true;                                   //Enable SMTP authentication
@@ -98,10 +98,10 @@ try {
         $data_response['status'] = 'success';
         $data_response['code'] = '200';
     }
-} catch (Exception $e) {
-    // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    $data_response['status'] = 'failed';
-    $data_response['code'] = '22000';
-}
+// } catch (Exception $e) {
+//     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+//     $data_response['status'] = 'failed';
+//     $data_response['code'] = '22000';
+// }
 
 echo json_encode($data_response);
