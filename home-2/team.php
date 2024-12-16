@@ -2,8 +2,8 @@
 <div class="container">
 
     <div class="section-title">
-        <h2 class="">Our Team</h2>
-
+        <h2 class="">Team</h2>
+        <div><span>Check Our</span> <span class="description-title">Team</span></div>
     </div>
 
     <div class="row_own">

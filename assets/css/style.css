@@ -61,32 +61,45 @@ a:hover {
   color: #23c2e1;
 }
 
-.section-title h2 {
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  padding-bottom: 60px;
   position: relative;
-  text-align: center;
 }
 
-.section-title h2::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 240px;
-  height: 3px;
-  background: #ddd;
-  bottom: -10px;
-  left: calc(50% - 120px);
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  position: relative;
 }
 
 .section-title h2::after {
   content: "";
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 3px;
-  background: #000000;
-  bottom: -10px;
-  left: calc(50% - 60px);
+  width: 150px;
+  height: 2.6px;
+  display: inline-block;
+  background: #269ed0;
+  margin: 4px 10px;
 }
+
+.section-title div {
+  color: var(--heading-color);
+  margin: 0;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+}
+
 
 .animate-text {
   background-image: linear-gradient(-225deg,
@@ -118,19 +131,7 @@ a:hover {
 /* ==================================================
   Elements
   ================================================== */
-.btn {
-  background-color: #199EB8;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 800;
-  color: #fff;
-  padding: 10px 30px;
-  border-radius: 50px;
-}
 
-.btn:hover {
-  background-color: #007aff;
-  color: #fff;
-}
 
 .btn:focus {
   color: #fff;
@@ -147,7 +148,7 @@ a:hover {
 }
 
 section {
-  padding: 85px 0;
+  padding: 50px 0;
 }
 
 .card {

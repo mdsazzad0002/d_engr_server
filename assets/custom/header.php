@@ -385,10 +385,8 @@ $active_status = str_replace("/", "", $_SERVER['REQUEST_URI']);
                                 } ?>" href="<?= APP_URL;?>faq/">FAQ</a>
         </li>
 
-        <li><a class="nav-link  <?php if ($active_status == 'my_profile') {
-                                  echo 'active';
-                                } ?>" href="<?= APP_URL;?>profile/"><i class="bi bi-person"></i>&nbsp;Profile</a>
-        </li>
+     
+     
 
 
 

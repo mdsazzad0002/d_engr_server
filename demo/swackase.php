@@ -27,7 +27,7 @@ if (isset($_POST['project_id'])) {
     $myObj->image = $r_employ['file'];
     $myObj->view_id = $r_employ['id'];
     $myObj->description = $r_employ['description'];
-    $myObj->download_link =  $r_employ['demo'] . '.zip';
+    $myObj->download_link =  $r_employ['demo'];
     $myObj->project_id =  $project_id;
 
 

@@ -6,8 +6,8 @@
             <br>
 
             <div class="d-flex gap-3 flex-wrap align-items-center justify-content-center">
-                <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">Learn About Feature</a>
-                <a class="btn" target="_blank" href="https://code.dengrweb.com">See Live</a>
+                <a class="btn btn-secondary rounded-lg btn-lg" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#"><i class="bi bi-info-circle-fill"></i>&nbsp;Learn About Feature</a>
+                <a class="btn btn-primary rounded-lg btn-lg" target="_blank" href="https://code.dengrweb.com"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Explore D CodeCamp</a>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
         </ul>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Understood</button>
+        <a  target="_blank" href="https://code.dengrweb.com" class="btn btn-primary"><i class="bi bi-box-arrow-up-right"></i>&nbsp;Explore D CodeCamp</a>
       </div>
     </div>
   </div>

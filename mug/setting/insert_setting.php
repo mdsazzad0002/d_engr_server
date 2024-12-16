@@ -1,7 +1,7 @@
 <?php 
     require_once '../assets/session.php';
 	require_once '../../conection/index.php';
-    $n = 100;
+    $n = 15;
     function getRandomString($n)
     {
       $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

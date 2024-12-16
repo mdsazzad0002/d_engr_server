@@ -171,7 +171,10 @@ if (!defined('main')) {
   <div class="container">
 
     <div class="section-title">
-      <h2>Contact Us</h2>
+      <h2>Contact</h2>
+      <div>
+        Contact Us
+      </div>
       <p class="text-center">Contact for any need. We are at your service. Requested no unnecessary contact.</p>
     </div>
     <?php

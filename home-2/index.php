@@ -68,54 +68,74 @@
 
 
         <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts" style="background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(<?= APP_URL; ?>assets/img/Web-Developer-skill.jpg) fixed center center;">
-            <div class="container">
+             <!-- Stats Section -->
+    <section id="stats" class="stats section"  style="background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(<?= APP_URL; ?>assets/img/Web-Developer-skill.jpg) fixed center center;">
 
-                <div class="row counters">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                    <div class="col-lg-3 col-6 text-center">
-                        <a href="#counts">
-                            <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `message`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                            <p>Feed Back</p>
-                        </a>
-                    </div>
+        <div class="row gy-4">
 
-                    <div class="col-lg-3 col-6 text-center">
-                        <a href="<?= APP_URL; ?>demo/">
-                            <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `project_info`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                            <p>Projects</p>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <a href="#counts">
-                            <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `visitor`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                            <p>Hit Counter</p>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-6 text-center">
-                        <a href="<?= APP_URL; ?>about#team">
-                            <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `employ`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                            <p>Hard Workers</p>
-                        </a>
-                    </div>
-
-                </div>
-
+            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-emoji-smile"></i>
+            <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `message`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
+                <p>Feed Back</p>
             </div>
-        </section><!-- End Counts Section -->
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-journal-richtext"></i>
+            <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `project_info`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
+                <p>Projects</p>
+            </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-headset"></i>
+            <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `visitor`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
+                <p>Hit Counter</p>
+            </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-people"></i>
+            <div class="stats-item">
+                <span data-purecounter-start="0" data-purecounter-end="<?php echo mysqli_num_rows($con->query("SELECT * FROM `employ`")); ?>" data-purecounter-duration="1" class="purecounter stats-no"></span>
+                <p>Hard Workers</p>
+            </div>
+            </div><!-- End Stats Item -->
+
+        </div>
+
+        </div>
+
+        </section><!-- /Stats Section -->
+
+
+
+        <?php 
+                // header or navbar section
+            if (file_exists(ROOT_PATH . 'home-2/service.php')) {
+                require_once ROOT_PATH .'home-2/service.php';
+            } else {
+                echo "Not found header";
+            }
+    
+            ?>
+        
+        
 
         <!-- ======= Features Section ======= -->
         <section class="features" id="features">
 
             <div class="container">
-                <div class=" section-title">
-                    <h2 class="text-center">
-                        Features
-                    </h2>
-
+                <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+                    <h2>Features</h2>
+                    <div><span>Check Our</span> <span class="description-title">Features</span></div>
                 </div>
+             
                 <div class="row">
                     <div class="feature-col col-lg-4 col-xs-12">
                         <div class="card card-block text-center" data-aos="fade-right">

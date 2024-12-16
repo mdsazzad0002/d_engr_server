@@ -152,8 +152,8 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <p class="h2 text-center" style="opacity: .5;">F.A.Q</p>
-      <h2>Frequently Asked Questions</h2>
+      <h2>F.A.Q</h2>
+      <p class="h2" style="opacity: .5;">Frequently Asked Questions</p>
     </div>
 
     <div class="row">

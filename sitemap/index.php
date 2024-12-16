@@ -49,6 +49,8 @@
 
 <body>
   <main id="main">
+   
+      
     <?php
 
     // header or navbar section
@@ -59,9 +61,13 @@
     }
     ?>
     <section id="sitemap">
+    <div class="container">
       <div class="section-title mt-5">
 
         <h2>Sitemap </h2>
+        <div>
+          Live and Complete Sitemap
+        </div>
       </div>
       <div class="content">
         <ul>
@@ -112,7 +118,9 @@
           </li>
         </ul>
       </div>
+    </div>
     </section>
+    
 
     <?php
 

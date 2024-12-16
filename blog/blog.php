@@ -3,7 +3,12 @@
 
 <section id="blog" class="blog">
     <div class="section-title">
-        <h2>Our Blog</h2>
+        <h2>Blog</h2>
+        <div>
+            <span>
+                <?= $_GET['title'] ?? 'Our Latest  Blog';?>
+            </span>
+        </div>
     </div>
 
     <div class="row">

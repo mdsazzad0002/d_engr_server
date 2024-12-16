@@ -39,11 +39,18 @@
     ?>
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
-      <div class="section-title">
-        <h2>Latest and Best Quality website Templates</h2>
-      </div>
+   
 
       <div class="container">
+      <div class="section-title">
+        <h2>Latest </h2>
+        <div>
+          <span>
+          Best Quality website Templates
+          </span>
+        </div>
+      </div>
+
         <div class="mt-3" id="swcase_load">
 
           <!-- load by ajax -->
@@ -85,6 +92,10 @@
             success: function(data) {
               let data_array = JSON.parse(data);
 
+              let download_link = data_array['download_link'];
+              let download_file_name = download_link.split('/');
+              download_link = download_link + '/'+download_file_name[download_file_name.length-1]+'.zip';
+
               let print_data = `<div data-aos="fade-up" data-aos-delay="100">
       <div class="member">
 
@@ -104,6 +115,7 @@
                 ${data_array['name']}
 
               </h4>
+       
              
               <p class="">${data_array['description']} </p>
 
@@ -112,7 +124,7 @@
                 <a target="_blank" href="<?=APP_URL;?>view/?id=${data_array['project_id']}" title="View this Templates" class="btn  ">
                 <i class="bi bi-arrow-up-right-square ">&nbsp;</i> Live Demo</a>
 
-                <a  href="/profile/?download=${data_array['project_id']}" title="Download  this Website templates" class="btn"><i class="bi bi-download"></i>&nbsp;</i> Free DownLoad</a>
+                <a  href="<?=APP_URL;?>${download_link}" title="Download  this Website templates" class="btn"><i class="bi bi-download"></i>&nbsp;</i> Free DownLoad</a>
               </div>
 
 

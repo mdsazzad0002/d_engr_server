@@ -356,7 +356,7 @@ if (isset($_GET['id'])) {
 
 
                 <section id='view' class="responsive">
-                    <iframe src="<?php echo $row_project_info['demo']; ?>" frameborder="0"></iframe>
+                    <iframe src="<?php echo APP_URL. $row_project_info['demo']; ?>" frameborder="0"></iframe>
                 </section>
 
 
