@@ -109,7 +109,7 @@ System requirement
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients section-title" style="padding-top: 15px; padding-bottom: 0;position:relative">
 
-      <div class="container" data-aos="zoom-in">
+      <div class="container mx-auto" data-aos="zoom-in">
       <!-- <div class="section-title">
           <h2>What We Use  </h2>
         </div> -->
